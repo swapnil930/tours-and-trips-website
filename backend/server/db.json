@@ -1,0 +1,201 @@
+{
+  "books": [
+    {
+      "title": "Atomic Habit",
+      "image": "https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg",
+      "author": "James Clear",
+      "publisher": "Penguin",
+      "publishedDate": "2018",
+      "description": "A practical guide to building good habits and breaking bad ones.",
+      "email": "jamesclear@mail.com",
+      "age": "38",
+      "category": "Motivation",
+      "lastUpdated": "2026-01-23T13:30:01.257Z",
+      "id": "2"
+    },
+    {
+      "title": "The Alchemist",
+      "image": "https://covers.openlibrary.org/b/isbn/9780061120084-L.jpg",
+      "author": "Paulo Coelho",
+      "publisher": "HarperOne",
+      "publishedDate": "1988",
+      "description": "A story about following your dreams and destiny.",
+      "email": "paulo@mail.com",
+      "age": "50",
+      "category": "Motivation",
+      "lastUpdated": "2026-01-23T13:34:44.387Z",
+      "id": "3"
+    },
+    {
+      "id": "4",
+      "title": "Rich Dad Poor Dad",
+      "author": "Robert Kiyosaki",
+      "publisher": "Plata Publishing",
+      "publishedDate": "1997",
+      "description": "A book about financial education and wealth building.",
+      "email": "robert@mail.com",
+      "image": "https://covers.openlibrary.org/b/isbn/9781612680194-L.jpg",
+      "age": "55",
+      "category": "Finance"
+    },
+    {
+      "id": "5",
+      "title": "Think and Grow Rich",
+      "author": "Napoleon Hill",
+      "publisher": "The Ralston Society",
+      "publishedDate": "1937",
+      "description": "A classic book on success and personal achievement.",
+      "email": "napoleon@mail.com",
+      "image": "https://covers.openlibrary.org/b/isbn/9781585424337-L.jpg",
+      "age": "60",
+      "category": "Motivation"
+    },
+    {
+      "id": "6",
+      "title": "Deep Work",
+      "author": "Cal Newport",
+      "publisher": "Grand Central",
+      "publishedDate": "2016",
+      "description": "Rules for focused success in a distracted world.",
+      "email": "cal@mail.com",
+      "image": "https://covers.openlibrary.org/b/isbn/9781455586691-L.jpg",
+      "age": "40",
+      "category": "Productivity"
+    },
+    {
+      "id": "7",
+      "title": "The Psychology of Money",
+      "author": "Morgan Housel",
+      "publisher": "Harriman House",
+      "publishedDate": "2020",
+      "description": "Timeless lessons on wealth, greed, and happiness.",
+      "email": "morgan@mail.com",
+      "image": "https://covers.openlibrary.org/b/isbn/9780857197689-L.jpg",
+      "age": "42",
+      "category": "Finance"
+    },
+    {
+      "id": "9",
+      "title": "The Subtle Art of Not Giving a F*ck",
+      "author": "Mark Manson",
+      "publisher": "Harper",
+      "publishedDate": "2016",
+      "description": "A counterintuitive approach to living a good life.",
+      "email": "mark@mail.com",
+      "image": "https://covers.openlibrary.org/b/isbn/9780062457714-L.jpg",
+      "age": "39",
+      "category": "Self Help"
+    },
+    {
+      "id": "10",
+      "title": "Start With Why",
+      "author": "Simon Sinek",
+      "publisher": "Portfolio",
+      "publishedDate": "2009",
+      "description": "How great leaders inspire everyone to take action.",
+      "email": "simon@mail.com",
+      "image": "https://covers.openlibrary.org/b/isbn/9781591846444-L.jpg",
+      "age": "50",
+      "category": "Motivation"
+    },
+    {
+      "title": "Tweenty Four Hours",
+      "author": "Devyani",
+      "publisher": "Self",
+      "publishedDate": "",
+      "description": "Book about daily hours in a life",
+      "email": "Devyani@gmail.com",
+      "image": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f",
+      "age": "21",
+      "lastUpdated": "2026-01-23T10:45:00",
+      "id": "fb97",
+      "category": "Philosophy"
+    },
+    {
+      "title": "Deep Thought",
+      "author": "Swapnil",
+      "publisher": "Deep Thought",
+      "publishedDate": "",
+      "description": "It is about your deep thought process",
+      "email": "swapnil@gmail.com",
+      "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+      "age": "25",
+      "lastUpdated": "2026-01-22T21:13:18.890Z",
+      "id": "a814",
+      "category": "Philosophy"
+    },
+    {
+      "title": "The Seven Habits of Highly Effective People",
+      "image": "https://covers.openlibrary.org/b/isbn/9780743269513-L.jpg",
+      "author": "Stephen R Covey",
+      "publisher": "Free Press",
+      "publishedDate": "1989",
+      "description": "Powerful lessons in personal change and effectiveness.",
+      "email": "covey@mail.com",
+      "age": "60",
+      "category": "Self Help",
+      "lastUpdated": "2026-01-23T12:19:44.905Z",
+      "id": "11"
+    },
+    {
+      "title": "The Intelligent Investor",
+      "image": "https://covers.openlibrary.org/b/isbn/9780060555665-L.jpg",
+      "author": "Benjamin Graham",
+      "publisher": "HarperBusiness",
+      "publishedDate": "1949",
+      "description": "The definitive book on value investing.",
+      "email": "graham@mail.com",
+      "age": "70",
+      "category": "Finance",
+      "lastUpdated": "2026-01-23T13:32:08.912Z",
+      "id": "12"
+    },
+    {
+      "id": "13",
+      "title": "Getting Things Done",
+      "author": "David Allen",
+      "publisher": "Penguin",
+      "publishedDate": "2001",
+      "description": "The art of stress-free productivity.",
+      "email": "allen@mail.com",
+      "image": "https://covers.openlibrary.org/b/isbn/9780142000281-L.jpg",
+      "age": "55",
+      "category": "Productivity"
+    },
+    {
+      "id": "14",
+      "title": "Man’s Search for Meaning",
+      "author": "Viktor Frankl",
+      "publisher": "Beacon Press",
+      "publishedDate": "1946",
+      "description": "Finding purpose through suffering and life experience.",
+      "email": "frankl@mail.com",
+      "image": "https://covers.openlibrary.org/b/isbn/9780807014271-L.jpg",
+      "age": "65",
+      "category": "Philosophy"
+    }
+  ],
+  
+  "categories": [
+    {
+      "id": "1",
+      "name": "Philosophy"
+    },
+    {
+      "id": "2",
+      "name": "Productivity"
+    },
+    {
+      "id": "3",
+      "name": "Finance"
+    },
+    {
+      "id": "4",
+      "name": "Self Help"
+    },
+    {
+      "id": "5",
+      "name": "Motivation"
+    }
+  ]
+}
