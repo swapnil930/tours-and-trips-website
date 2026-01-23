@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export class api {
-    static serverURL = 'http://localhost:8080';
+    static serverURL = 'https://book-inventory-management-oqn8.onrender.com';
 
     static getAllBooks() {
         let dataURL = `${this.serverURL}/books`;
