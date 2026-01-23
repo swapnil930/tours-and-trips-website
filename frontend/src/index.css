@@ -1,0 +1,13 @@
+
+@import "tailwindcss";
+
+body {
+  font-family: 'Times New Roman', Times, serif; 
+  background: linear-gradient(to top, #ffffff 0%, #dcdcdc 100%);   transition: background 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background: #121212 !important;  /* Ensures full dark background */
+  color: #ffffff;
+}
