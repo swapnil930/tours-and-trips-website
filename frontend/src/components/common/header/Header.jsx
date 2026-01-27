@@ -40,7 +40,7 @@ const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
           <div className="flex items-center space-x-2">
             <div>
               <h1 className={`text-2xl font-bold ${scrolled ? 'text-gray-900' : 'text-white'}`}>
-                WanderLust
+                Demo Trips
               </h1>
               <p className={`text-xs ${scrolled ? 'text-gray-600' : 'text-blue-100'}`}>
                 Explore the World
