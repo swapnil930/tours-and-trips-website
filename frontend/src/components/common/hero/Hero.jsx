@@ -1,8 +1,6 @@
-import { useState, useEffect } from "react";
 import Stats from "../../about/Stats";
 
 const Hero = () => {
-
 
     return (
         <section className="relative h-[700px] overflow-hidden mb-16">
