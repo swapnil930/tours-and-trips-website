@@ -3,7 +3,7 @@ import Testimonials from "../components/home/Testimonials";
 import FeaturedTours from "../components/home/FeaturedTours";
 import WhyChooseUs from "../components/home/WhyChooseUs";
 import ExpertBanner from "../components/home/ExpertBanner";
-import NewsLetter from "../components/common/NewsLetter/NewsLetter";
+import NewsLetter from "../components/common/newsLetter/NewsLetter";
 import HomeHero from "../components/home/HomeHero";
 
 const Home = () => {
