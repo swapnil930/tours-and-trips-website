@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Tours from "../pages/Tours";
 import Footer from "../components/common/Footer/Footer";
-import Header from "../components/common/Header/Header";
+import Header from "../components/common/header/Header";
 import Home from "../pages/Home";
 import Destinations from "../pages/Destinations";
 import About from "../pages/About";

@@ -1,5 +1,5 @@
 import { FaCalendar, FaMapMarkerAlt, FaStopwatch } from "react-icons/fa";
-import Hero from "../components/common/Hero/Hero";
+import Hero from "../components/common/hero/Hero";
 import NewsLetter from "../components/common/NewsLetter/NewsLetter";
 
 const Tours = () => {
