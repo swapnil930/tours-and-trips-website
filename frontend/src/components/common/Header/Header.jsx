@@ -1,4 +1,4 @@
-import { FaBars, FaGlobe, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Header = ({ scrolled, menuOpen, setMenuOpen }) => {

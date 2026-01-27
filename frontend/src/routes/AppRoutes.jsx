@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import Tours from "../pages/Tours";
 import Footer from "../components/common/Footer/Footer";
-import Header from "../components/common/header/Header";
 import Home from "../pages/Home";
 import Destinations from "../pages/Destinations";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
+import Header from "../components/common/header/Header"
 
 const AppRoutes = ({ scrolled, menuOpen, setMenuOpen }) => {
   return (

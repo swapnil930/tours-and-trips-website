@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import AppRoutes from "./routes/AppRoutes";
+import ScrollToTop from "./utils/ScrollToTop";
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,6 +19,7 @@ const App = () => {
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
       />
+      <ScrollToTop/>
     </>
   );
 };
