@@ -1,17 +1,17 @@
-import Hero from "../components/Home/Hero";
 import PopularDestinations from "../components/Home/PopularDestinations";
 import Testimonials from "../components/Home/Testimonials";
 import FeaturedTours from "../components/Home/FeaturedTours";
 import WhyChooseUs from "../components/Home/WhyChooseUs";
 import ExpertBanner from "../components/home/ExpertBanner";
 import NewsLetter from "../components/common/NewsLetter/NewsLetter";
+import HomeHero from "../components/home/HomeHero";
 
 const Home = () => {
 
 
   return (
     <>
-      <Hero />
+      <HomeHero />
       <FeaturedTours />
       <ExpertBanner />
       <PopularDestinations />

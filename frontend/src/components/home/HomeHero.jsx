@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { FaMapMarkerAlt, } from "react-icons/fa";
 import Stats from "../about/Stats";
 
-const Hero = () => {
+const HomeHero = () => {
   const destinations = [
     {
       id: 1,
@@ -142,4 +142,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HomeHero;
