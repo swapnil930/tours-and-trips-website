@@ -13,13 +13,13 @@ const Hero = () => {
 
     const getDescription = () => {
         if (location.pathname === "/upcoming-tours") return "lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis alias nulla error magnam nesciunt illum consequatur.";
-        if (location.pathname === "/booking") return "lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis alias nulla error magnam nesciunt illum consequatur.";
+        if (location.pathname === "/contact") return "lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis alias nulla error magnam nesciunt illum consequatur.";
         return "";
     };
 
     const getImage = () => {
         if (location.pathname === "/upcoming-tours") return "/images/hero/tours-hero.jpg";
-        if (location.pathname === "/booking") return "/images/hero/booking-hero.jpg";
+        if (location.pathname === "/contact") return "/images/hero/contact-hero.jpg";
         return "";
     };
 
