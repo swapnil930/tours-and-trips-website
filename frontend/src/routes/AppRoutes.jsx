@@ -5,9 +5,9 @@ import Home from "../pages/Home";
 import Destinations from "../pages/Destinations";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
-import Header from "../components/common/header/Header"
-import WhatsAppBtn from "../components/common/Footer/WhatsAppBtn";
+import WhatsAppBtn from "../components/common/footer/WhatsAppBtn";
 import BookingForm from "../pages/Booking";
+import Header from "../components/common/header/Header";
 
 const AppRoutes = ({ scrolled, menuOpen, setMenuOpen }) => {
   return (
