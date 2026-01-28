@@ -7,7 +7,7 @@ const Hero = () => {
 
     const getHeading = () => {
         if (location.pathname === "/upcoming-tours") return "Upcoming Trips & Tours";
-        if (location.pathname === "/booking") return "Book Your Adventure";
+        if (location.pathname === "/contact") return "Book Your Adventure";
         return "";
     };
 
