@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
-import {FaSearch } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import Stats from "../about/Stats";
 
 const HomeHero = () => {
-  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024);
 
   const destinations = [
     {
@@ -42,7 +41,7 @@ const HomeHero = () => {
   const [searchValue, setSearchValue] = useState("");
   const [progress, setProgress] = useState(0);
   const [fade, setFade] = useState(true);
-
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024);
 
   useEffect(() => {
     setProgress(0);
@@ -55,11 +54,17 @@ const HomeHero = () => {
     }, 100);
 
     const slideTimer = setTimeout(() => {
-      setFade(false);
+      // Only apply fade on small screens
+      if (!isLargeScreen) {
+        setFade(false);
+      }
 
       setTimeout(() => {
         setCurrentIndex((prev) => (prev + 1) % destinations.length);
-        setFade(true);
+
+        if (!isLargeScreen) {
+          setFade(true);
+        }
       }, 400);
     }, 3500);
 
@@ -67,8 +72,7 @@ const HomeHero = () => {
       clearInterval(progressInterval);
       clearTimeout(slideTimer);
     };
-  }, [currentIndex, destinations.length]);
-
+  }, [currentIndex, destinations.length, isLargeScreen]);
 
   const currentDestin = destinations[currentIndex];
 
@@ -94,9 +98,8 @@ const HomeHero = () => {
             }`}
           style={{ backgroundImage: `url(${bgImage})` }}
         />
+
       </div>
-
-
 
       <div className="h-full w-full max-w-[88rem] mx-auto px-6 md:px-8 lg:px-10 relative grid md:grid-cols-2 md:gap-10">
         {/* Left Section */}
@@ -129,11 +132,10 @@ const HomeHero = () => {
           </div>
         </div>
 
-        {/* Right Section - Destination Card & Progress */}
+        {/* Right Section*/}
         <div className="h-full w-full hidden md:flex flex-col justify-center items-end pb-10">
           <div className="h-full w-fit flex justify-center items-center">
             <div className="flex flex-row items-center gap-6">
-              {/* Destination Card */}
               <div className="animate-in flex flex-col items-center gap-8 justify-center">
                 <div className="flex relative justify-center w-full items-center">
                   <div
@@ -142,7 +144,6 @@ const HomeHero = () => {
                     style={{ opacity: 1, transform: "none", userSelect: "none", touchAction: "pan-x" }}
                   >
                     <div className="grid grid-cols-7 gap-4 h-40 lg:h-48 w-full max-w-sm p-2.5">
-                      {/* Image Container */}
                       <div className="col-span-3 relative h-full w-full rounded-lg overflow-hidden">
                         <img
                           src={currentDestin.image}
@@ -151,7 +152,6 @@ const HomeHero = () => {
                         />
                       </div>
 
-                      {/* Text Container */}
                       <div className="col-span-4 py-2 lg:py-4 px-2 text-white flex flex-col justify-center gap-2">
                         <h2 className="text-lg lg:text-2xl font-semibold">{currentDestin.name}</h2>
                         <p className="lg:text-sm text-xs overflow-hidden line-clamp-4">

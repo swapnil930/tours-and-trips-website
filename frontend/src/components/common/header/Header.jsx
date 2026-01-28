@@ -1,4 +1,4 @@
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaInstagram, FaPhone, FaPhoneAlt, FaTimes } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 
 const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
@@ -50,21 +50,38 @@ const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
               );
             })}
           </nav>
+          <div className="flex items-center justify-center gap-1">
 
-          <Link to="/booking" className="hidden md:block px-6 py-2.5 bg-white text-black rounded-full font-medium hover:shadow-lg hover:scale-105 transition-all">
-            Book Now
-          </Link>
+            <div className="flex flex-row items-center gap-2 lg:gap-4">
+              <a className="flex flex-row gap-1 items-center text-xs font-medium" href="https://www.instagram.com/tripzee_holidays/">
+                <FaInstagram size={24} />
+              </a>
+              <span>|</span>
+              <a href="tel:+919136970722">
+                <div
+                  className="flex items-center justify-center gap-1 font-medium text-xs 
+                 h-7 w-7 bg-black rounded-full text-yellow-500 
+                 lg:px-3 py-1 lg:h-fit lg:w-fit lg:hover:bg-blue-500 
+                 transition-all duration-300 ease-in-out"
+                >
+                  <FaPhoneAlt size={14} />
+                  <span className="hidden lg:block">(+91) 9834559697</span>
+                </div>
+              </a>
 
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden p-2 rounded-lg"
-          >
-            {menuOpen ? (
-              <FaTimes className={scrolled ? "text-gray-900" : "text-white"} />
-            ) : (
-              <FaBars className={scrolled ? "text-gray-900" : "text-white"} />
-            )}
-          </button>
+            </div>
+            <span className=" lg:hidden">|</span>
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="md:hidden p-2 rounded-lg"
+            >
+              {menuOpen ? (
+                <FaTimes className={scrolled ? "text-gray-900" : "text-white"} />
+              ) : (
+                <FaBars className={scrolled ? "text-gray-900" : "text-white"} />
+              )}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -98,13 +115,7 @@ const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
 
             );
           })}
-          <Link
-            to="/booking"
-            onClick={closeMenu}
-            className="text-black hover:text-white text-lg font-semibold transition-all"
-          >
-            Book Now
-          </Link>
+
         </div>
       </div>
     </header>
