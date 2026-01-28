@@ -1,27 +1,27 @@
-import { FaAward, FaChartLine, FaHeart, FaShieldAlt, } from "react-icons/fa";
+import { FaAward, FaChartLine, FaHeart, FaShieldAlt } from "react-icons/fa";
 
 const WhyChooseUs = () => {
   const features = [
     {
       icon: <FaAward className="w-8 h-8" />,
-      title: 'Best Price Guarantee',
-      description: 'We ensure you get the best prices for all our tours and packages'
+      title: "Best Price Guarantee",
+      description: "We ensure you get the best prices for all our tours and packages",
     },
     {
       icon: <FaShieldAlt className="w-8 h-8" />,
-      title: 'Safe & Secure',
-      description: 'Your safety is our priority with secure payments and insurance'
+      title: "Safe & Secure",
+      description: "Your safety is our priority with secure payments and insurance",
     },
     {
       icon: <FaHeart className="w-8 h-8" />,
-      title: 'Trusted by Thousands',
-      description: 'Join 50,000+ happy travelers who explored the world with us'
+      title: "Trusted by Thousands",
+      description: "Join 50,000+ happy travelers who explored the world with us",
     },
     {
-      icon: <FaChartLine  className="w-8 h-8" />,
-      title: '24/7 Support',
-      description: 'Our team is always available to help you anytime, anywhere'
-    }
+      icon: <FaChartLine className="w-8 h-8" />,
+      title: "24/7 Support",
+      description: "Our team is always available to help you anytime, anywhere",
+    },
   ];
 
   return (
@@ -40,13 +40,41 @@ const WhyChooseUs = () => {
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              className="relative overflow-hidden bg-white p-8 rounded-2xl shadow-lg 
+              transition-all duration-500 group"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center text-white mb-6 transform group-hover:rotate-6 transition-transform">
-                {feature.icon}
+              {/* Card Blast Layer (comes from icon) */}
+              <span
+                className="absolute w-[450px] h-[450px] rounded-full bg-indigo-500
+                top-[60px] left-[60px] -translate-x-1/2 -translate-y-1/2
+                scale-0 transition-transform duration-700 ease-out
+                group-hover:scale-100 opacity-0 group-hover:opacity-90"
+              ></span>
+
+              {/* Content */}
+              <div className="relative z-10">
+                {/* Icon Wrapper */}
+                <div className="relative w-16 h-16 mb-6">
+                  {/* Icon Box */}
+                  <div
+                    className="w-full h-full rounded-2xl flex items-center justify-center
+                      bg-gradient-to-br from-blue-500 to-purple-600 text-white
+                      transition-all duration-500
+                      group-hover:bg-white group-hover:bg-none group-hover:text-indigo-600"
+                  >
+                    {feature.icon}
+                  </div>
+
+                </div>
+
+                <h3 className="text-xl font-bold mb-3 transition-colors duration-300 group-hover:text-white">
+                  {feature.title}
+                </h3>
+
+                <p className="transition-colors duration-300 group-hover:text-gray-200">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
             </div>
           ))}
         </div>
@@ -54,4 +82,5 @@ const WhyChooseUs = () => {
     </section>
   );
 };
-export default WhyChooseUs
+
+export default WhyChooseUs;
