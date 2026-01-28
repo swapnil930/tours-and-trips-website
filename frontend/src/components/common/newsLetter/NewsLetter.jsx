@@ -6,8 +6,7 @@ const NewsLetter = () => {
       <div className="max-w-6xl mx-auto">
         <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl shadow-xl border-t-4 border-blue-500">
           
-          <div className="grid grid-cols-1 md:grid-cols-3 h-full w-full">
-            
+          <div className="grid grid-cols-1 md:grid-cols-3 h-full w-full">        
             {/* Left Section */}
             <div className="flex justify-start lg:justify-center items-center px-5 md:px-0 pt-8 pb-6 md:py-10">
               <div className="flex flex-col gap-2 pl-4">
@@ -25,8 +24,6 @@ const NewsLetter = () => {
             {/* Right Section */}
             <div className="col-span-2 px-5 md:px-0 md:pr-4 xl:px-10 md:pt-8 lg:pt-10 pb-6">
               <form className="w-full space-y-4 lg:space-y-6">
-
-                {/* Row 1 */}
                 <div className="grid md:grid-cols-2 gap-4 lg:gap-6">
                   <div className="relative">
                     <FaUser className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500" />
@@ -45,7 +42,6 @@ const NewsLetter = () => {
                   </div>
                 </div>
 
-                {/* Row 2 */}
                 <div className="grid md:grid-cols-2 gap-4 lg:gap-6">
                   <div className="relative">
                     <FaPhone className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500" />
@@ -64,7 +60,6 @@ const NewsLetter = () => {
                   </div>
                 </div>
 
-                {/* Button */}
                 <div className="flex justify-end">
                   <button
                     type="submit"

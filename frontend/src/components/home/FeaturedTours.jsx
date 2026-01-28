@@ -94,7 +94,6 @@ const FeaturedTours = () => {
         <FaArrowLeft className="text-yellow-300" />
       </button>
 
-      {/* Slider */}
       <div
         ref={sliderRef}
         className="flex gap-8 overflow-x-scroll scroll-smooth scrollbar-hide px-10  "
@@ -104,23 +103,19 @@ const FeaturedTours = () => {
             key={tour.id}
             className="relative min-w-[275px] h-[370px] rounded-2xl overflow-hidden shadow-lg group"
           >
-            {/* Image */}
             <img
               src={tour.image}
               alt={tour.title}
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
 
-            {/* Dark Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
 
-            {/* Price Tag */}
             <div className="absolute top-3 right-3 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">
               <span className="line-through text-xs mr-1">₹{tour.oldPrice}</span>
               ₹{tour.price}
             </div>
 
-            {/* Content */}
             <div className="absolute bottom-0 p-4 text-white space-y-2 w-full">
               <span className="inline-block bg-yellow-400 text-black border border-white text-[9px]  px-2 py-1 rounded-full">
                 Group Tour
@@ -167,4 +162,4 @@ const FeaturedTours = () => {
   );
 };
 
-export default FeaturedTours;
+export default FeaturedTours
