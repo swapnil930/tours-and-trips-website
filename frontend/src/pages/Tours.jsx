@@ -2,8 +2,13 @@ import { FaCalendar, FaMapMarkerAlt, FaStopwatch } from "react-icons/fa";
 
 import Hero from "../components/common/hero/Hero";
 import NewsLetter from "../components/common/newsLetter/NewsLetter";
+import { useLocation } from "react-router-dom";
+import WhyChooseUs from "../components/home/WhyChooseUs";
+import NewsletterModal from "../components/common/modal/Modal";
 
 const Tours = () => {
+  const location = useLocation();
+
   const tours = [
     {
       id: 1,
@@ -70,25 +75,30 @@ const Tours = () => {
   return (
     <>
       {/* Hero Section */}
-      <Hero />
+      <Hero
+        title="Upcoming Trips & Tours"
+        desc="Whether you're seeking adventure, culture, relaxation, or exploration, our thoughtfully crafted itineraries are designed to fuel your wanderlust and connect like-minded travellers along the way.."
+        image="/images/hero/tours-hero.jpg"
+      />
 
-      {/* Newsletter (position controlled from page) */}
       <div className="relative z-20 lg:px-15 mx-5 -mt-28">
         <NewsLetter />
       </div>
 
       {/* Tours Section */}
       <div className="relative w-full mb-16 mt-20">
-        {/* Heading */}
         <div className="flex flex-col items-start px-6 md:px-10 mb-10">
           <span className="h-1 w-28 bg-yellow-500 mb-2 rounded-full"></span>
           <div className="flex w-full justify-between items-center">
             <p className="text-2xl md:text-3xl lg:text-4xl font-bold">
               All Upcoming Trips
             </p>
-            <button className="hidden lg:flex text-black font-medium rounded-lg px-4 py-2 bg-yellow-400 hover:bg-yellow-500">
-              Explore All
-            </button>
+            {!location.pathname === "/upcoming-tours" && (
+              <button className="hidden lg:flex text-black font-medium rounded-lg px-4 py-2 bg-yellow-400 hover:bg-yellow-500">
+                Explore All
+              </button>
+            )}
+
           </div>
         </div>
 
@@ -106,18 +116,14 @@ const Tours = () => {
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
 
-              {/* Dark Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
 
-              {/* Price Tag */}
               <div className="absolute top-3 right-3 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">
                 <span className="line-through text-xs mr-1">
                   ₹{tour.oldPrice}
                 </span>
                 ₹{tour.price}
               </div>
-
-              {/* Content */}
               <div className="absolute bottom-0 p-4 text-white space-y-2 w-full">
                 <span className="inline-block bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">
                   Group Tour
@@ -151,11 +157,16 @@ const Tours = () => {
 
         {/* Mobile Button */}
         <div className="flex justify-center mt-10 lg:hidden">
-          <button className="text-black font-medium rounded-lg px-6 py-2 bg-yellow-400 hover:bg-yellow-500">
-            Explore All
-          </button>
+          {!location.pathname === "/upcoming-tours" && (
+            <button className="text-black font-medium rounded-lg px-6 py-2 bg-yellow-400 hover:bg-yellow-500">
+              Explore All
+            </button>
+          )}
+
         </div>
       </div>
+      <WhyChooseUs />
+      <NewsletterModal />
     </>
   );
 };

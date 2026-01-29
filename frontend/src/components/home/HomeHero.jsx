@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
-import Stats from "../about/Stats";
+import Stats from "../common/hero/Stats";
 
 const HomeHero = () => {
 
@@ -54,7 +54,6 @@ const HomeHero = () => {
     }, 100);
 
     const slideTimer = setTimeout(() => {
-      // Only apply fade on small screens
       if (!isLargeScreen) {
         setFade(false);
       }

@@ -5,7 +5,9 @@ import App from './App.jsx'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter } from 'react-router-dom';
+import ReactModal from 'react-modal';
 
+ReactModal.setAppElement("#root");
 
 createRoot(document.getElementById('root')).render(
    <BrowserRouter>

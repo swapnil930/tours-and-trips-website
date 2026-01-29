@@ -1,4 +1,4 @@
-import { FaChevronRight, FaGlobe, FaInstagram, FaLinkedin, FaMailBulk, FaMapPin, FaPhone, FaTwitter, FaChartLine  } from "react-icons/fa";
+import { FaChevronRight, FaInstagram, FaLinkedin, FaMailBulk, FaMapPin, FaPhone, FaTwitter, FaChartLine  } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -68,7 +68,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <FaMapPin className="w-5 h-5 mr-3 mt-1 text-blue-400" />
-                <span>123 Travel Street, Adventure City, AC 12345</span>
+                <span>123 Travel Street, example City, Demo 12345</span>
               </li>
               <li className="flex items-center">
                 <FaPhone className="w-5 h-5 mr-3 text-blue-400" />
@@ -76,7 +76,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <FaMailBulk className="w-5 h-5 mr-3 text-blue-400" />
-                <span>info@wanderlust.com</span>
+                <span>info@DemoTrip.com</span>
               </li>
             </ul>
           </div>
@@ -86,7 +86,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 WanderLust. All rights reserved.
+              © 2024 DemoTrip. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="hover:text-blue-400 transition-colors">Privacy Policy</a>

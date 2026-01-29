@@ -11,8 +11,8 @@ const WhatsAppBtn = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="bg-yellow-400 p-3 rounded-full shadow-xl hover:scale-105 transition">
-            <FaWhatsapp size={35} className="text-green-500 p-1 rounded-full bg-white text-xl" />
+          <button className="rounded-full shadow-xl hover:scale-105 transition">
+            <FaWhatsapp size={45} className="text-white bg-green-500 p-1 rounded-full text-xl" />
           </button>
         </a>
       </div>

@@ -6,8 +6,8 @@ import Destinations from "../pages/Destinations";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import WhatsAppBtn from "../components/common/footer/WhatsAppBtn";
-import BookingForm from "../pages/Booking";
 import Header from "../components/common/header/Header";
+import Blogs from "../pages/Blogs";
 
 const AppRoutes = ({ scrolled, menuOpen, setMenuOpen }) => {
   return (
@@ -18,13 +18,13 @@ const AppRoutes = ({ scrolled, menuOpen, setMenuOpen }) => {
         <Route path="/" element={<Home />} />
         <Route path="/upcoming-tours" element={<Tours />} />
         <Route path="/destinations" element={<Destinations />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/booking" element={<BookingForm/>}/>
+        <Route path="/about-us" element={<About />} />
+        <Route path="/contact-us" element={<Contact />} />
+        <Route path="/blogs" element={<Blogs />} />
       </Routes>
 
       <Footer />
-      <WhatsAppBtn/>
+      <WhatsAppBtn />
     </>
   );
 };

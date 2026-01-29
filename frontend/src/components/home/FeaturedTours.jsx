@@ -1,5 +1,6 @@
 import { useRef } from "react";
-import { FaArrowLeft, FaArrowRight, FaCalendar, FaLocationArrow, FaMapMarked, FaMapMarkerAlt, FaMapPin, FaSearchLocation, FaSitemap, FaStopwatch } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight, FaCalendar, FaMapMarkerAlt, FaStopwatch } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const FeaturedTours = () => {
 
@@ -80,9 +81,9 @@ const FeaturedTours = () => {
           <p className="text-3xl lg:text-4xl font-bold">
             Featured Destinations
           </p>
-          <button className="hidden lg:flex text-black font-medium rounded-lg p-2 bg-yellow-400 hover:bg-yellow-500">
+          <Link to="/upcoming-tours" className="hidden lg:flex text-black font-medium rounded-lg p-2 bg-yellow-400 hover:bg-yellow-500">
             Explore All
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -152,9 +153,9 @@ const FeaturedTours = () => {
         <FaArrowRight className="text-yellow-300" />
       </button>
       <div className="flex justify-center mt-8 lg:hidden">
-        <button className="text-black font-medium rounded-lg px-6 py-2 bg-yellow-400 hover:bg-yellow-500">
+        <Link to="/upcoming-tours" className="text-black font-medium rounded-lg px-6 py-2 bg-yellow-400 hover:bg-yellow-500">
           Explore All
-        </button>
+        </Link>
       </div>
 
     </div>

@@ -10,7 +10,7 @@ const PopularDestinations = () => {
 
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start mb-10">
           <span className="h-1 w-28 bg-yellow-500 mb-2 rounded-full"></span>

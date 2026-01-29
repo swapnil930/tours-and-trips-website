@@ -71,7 +71,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="pt-12 bg-white overflow-hidden">
+    <section className="pt-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col items-start mb-10">
           <span className="h-1 w-28 bg-yellow-500 mb-2 rounded-full"></span>

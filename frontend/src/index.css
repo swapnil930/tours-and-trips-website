@@ -11,3 +11,9 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;     /* Firefox */
 }
+*{
+  font-family: 'Times New Roman', Times, serif;
+}
+body{
+  background: #fdfbf6;
+}

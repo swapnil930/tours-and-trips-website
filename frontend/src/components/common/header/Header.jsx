@@ -1,4 +1,4 @@
-import { FaBars, FaInstagram, FaPhone, FaPhoneAlt, FaTimes } from "react-icons/fa";
+import { FaBars, FaInstagram, FaPhoneAlt, FaTimes } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 
 const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
@@ -7,9 +7,9 @@ const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
   const tabs = [
     { id: 1, title: "Home", path: "/" },
     { id: 2, title: "Tour", path: "/upcoming-tours" },
-    { id: 3, title: "Destinations", path: "/destinations" },
-    { id: 4, title: "About", path: "/about" },
-    { id: 5, title: "Contact", path: "/contact" },
+    { id: 3, title: "Blog", path: "/blogs" },
+    { id: 4, title: "About", path: "/about-us" },
+    { id: 5, title: "Contact Us", path: "/contact-us" },
   ];
 
   const closeMenu = () => setMenuOpen(false);
@@ -60,11 +60,11 @@ const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
               <a href="tel:+919136970722">
                 <div
                   className="flex items-center justify-center gap-1 font-medium text-xs 
-                 h-7 w-7 bg-black rounded-full text-yellow-500 
+                 h-6.5 w-6.5 bg-black rounded-full text-yellow-500 
                  lg:px-3 py-1 lg:h-fit lg:w-fit lg:hover:bg-blue-500 
                  transition-all duration-300 ease-in-out"
                 >
-                  <FaPhoneAlt size={14} />
+                  <FaPhoneAlt size={13} />
                   <span className="hidden lg:block">(+91) 9834559697</span>
                 </div>
               </a>
@@ -87,11 +87,11 @@ const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
 
       {/* Mobile Menu Slide Down */}
       <div
-        className={`md:hidden fixed top-0 left-0 w-full h-[40%] bg-yellow-400
+        className={`md:hidden fixed top-0 left-0 w-full h-[35%] bg-yellow-400
         transform transition-all duration-500 ease-in-out rounded-br-4xl
         ${menuOpen ? "translate-y-0" : "-translate-y-full"}`}
       >
-        <div className="p-6 flex flex-col space-y-4">
+        <div className="p-6 flex flex-col space-y-2">
           <div className="flex justify-end">
             <button onClick={closeMenu}>
               <FaTimes className="text-black text-xl" />
@@ -105,7 +105,7 @@ const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
                 key={item.id}
                 to={item.path}
                 onClick={closeMenu}
-                className={`text-lg font-semibold transition-all ${isActive
+                className={`text-md font-medium transition-all ${isActive
                   ? "text-white"
                   : "text-black hover:text-white"
                   }`}

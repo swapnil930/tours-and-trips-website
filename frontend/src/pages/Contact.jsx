@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import Hero from "../components/common/hero/Hero";
+import FAQSection from "../components/faq/FAQSection";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -46,7 +47,11 @@ const Contact = () => {
 
   return (
     <>
-      <Hero />
+      <Hero
+        title="Book Your Adventure"
+        desc="At Demo Holidays, we believe that travel is more than just reaching a destination, it's about creating unforgettable experiences that stay with you for a lifetime.."
+        image="/images/hero/contact-hero.jpg"
+      />
 
       <div className="flex flex-col px-6 lg:px-10 mb-10">
         <span className="h-1 w-28 bg-yellow-500 mb-4 rounded-full"></span>
@@ -54,13 +59,21 @@ const Contact = () => {
         <div className="flex flex-col lg:flex-row w-full gap-12">
           {/* LEFT TEXT */}
           <div className="w-full lg:w-1/2">
-            <p className="text-3xl lg:text-4xl font-bold mb-4">
+            <p className="text-4xl lg:text-5xl font-bold mb-4">
               Let's Connect and make trip with us
             </p>
             <p className="text-md font-medium">
               Plan your Next Adventure with us, and Explore the World with TripZee
               Holidays. Enquire now!
             </p>
+            <div className="mt-2">
+              <p className="text-md font-medium">
+                <span className="font-bold">Phone </span>: +91 123456789
+              </p>
+              <p className="text-md font-medium">
+                <span className="font-bold">Email</span> : example@gmail.com
+              </p>
+            </div>
           </div>
 
           {/* RIGHT FORM */}
@@ -138,7 +151,6 @@ const Contact = () => {
                         onChange={handleChange}
                         className={inputClasses}
                       >
-                        {/* Placeholder option */}
                         <option value="" disabled>
                           Select Month
                         </option>
@@ -226,6 +238,7 @@ const Contact = () => {
           </div>
         </div >
       </div >
+      <FAQSection />
     </>
   );
 };
