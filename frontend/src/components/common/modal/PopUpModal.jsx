@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import Modal from "react-modal";
 
-const NewsletterModal = () => {
+const PopUpModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -38,7 +38,7 @@ const NewsletterModal = () => {
         overlayClassName="fixed inset-0 bg-black/60 flex items-start justify-center z-50"
       >
         <div className="flex font-bold mb-2 justify-end">
-          <FaTimes size={20} className="text-white w-5 h-5 p-1 bg-yellow-500 rounded-full" onClick={() => setIsOpen(false)} size={15} />
+          <FaTimes size={20} className="text-white w-5 h-5 p-1 bg-yellow-500 rounded-full" onClick={() => setIsOpen(false)} />
         </div>
         <p className="text-gray-500 text-sm text-center mb-6">
           Get travel deals, offers & updates from Tripzee Holidays
@@ -96,4 +96,4 @@ const NewsletterModal = () => {
   );
 };
 
-export default NewsletterModal;
+export default PopUpModal;

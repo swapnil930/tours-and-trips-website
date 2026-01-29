@@ -4,8 +4,7 @@ import Hero from "../components/common/hero/Hero";
 import NewsLetter from "../components/common/newsLetter/NewsLetter";
 import { useLocation } from "react-router-dom";
 import WhyChooseUs from "../components/home/WhyChooseUs";
-import NewsletterModal from "../components/common/modal/Modal";
-
+import PopUpModal from "../components/common/modal/PopUpModal";
 const Tours = () => {
   const location = useLocation();
 
@@ -166,7 +165,7 @@ const Tours = () => {
         </div>
       </div>
       <WhyChooseUs />
-      <NewsletterModal />
+      <PopUpModal />
     </>
   );
 };
