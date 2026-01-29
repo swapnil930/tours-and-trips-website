@@ -22,13 +22,13 @@ const Stats = () => {
       {/* Rating */}
       <div className="flex justify-center items-center">
         <div className="flex items-center gap-2">
-          <FaGoogle className="text-3xl lg:text-4xl text-red-600 bg-white p-1 rounded-lg" />
+          <FaGoogle size={35} className=" p-1 lg:text-4xl text-red-600 bg-white rounded-lg" />
           <div className="flex flex-col">
             <span className="font-semibold tracking-wider lg:text-lg xl:text-xl">
-              4.7
+              2,800+
             </span>
             <span className="text-xs lg:text-sm font-light">
-              (2,800+ Reviews)
+              Reviews
             </span>
           </div>
         </div>
@@ -37,7 +37,7 @@ const Stats = () => {
       {/* Experience */}
       <div className="flex justify-center items-center">
         <div className="flex items-center gap-2">
-          <FaAward className="text-3xl lg:text-4xl bg-blue-500 p-1 rounded-lg " />
+          <FaAward size={35} className=" p-1 lg:text-4xl bg-blue-500  rounded-lg " />
           <div className="flex flex-col">
             <span className="font-semibold tracking-wider lg:text-lg xl:text-xl">
               10+ Years
