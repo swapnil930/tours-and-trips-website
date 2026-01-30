@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaSearch } from "react-icons/fa";
+import { FaMapMarkedAlt, FaMapMarkerAlt, FaSearch } from "react-icons/fa";
 import Stats from "../common/hero/Stats";
 
 const HomeHero = () => {
@@ -116,11 +116,12 @@ const HomeHero = () => {
           <div className="flex flex-row justify-between items-center gap-8 mt-6 lg:mt-10 bg-white w-full max-w-xl mx-auto h-fit rounded-md lg:p-3 lg:pl-4 p-2 text-sm lg:text-base">
             <div className="flex flex-row gap-2 items-center h-fit w-full">
               <div className="flex gap-4 sm:gap-6 justify-center items-center h-full w-full">
-                <div className="flex flex-row gap-2 items-center h-10 w-full max-w-md relative">
-                  <FaSearch className="text-gray-400" />
+                <div className="flex flex-row gap-2 items-center h-9 w-full max-w-md relative">
+                  <FaMapMarkerAlt size={16} className="text-gray-400" />
                   <input
+                    id="search"
                     placeholder="Search"
-                    className="bg-transparent focus-visible:outline-none text-black w-full pb-1 placeholder:text-zinc-500"
+                    className="bg-transparent focus-visible:outline-none text-black w-full placeholder:text-zinc-500"
                     value={searchValue}
                     onChange={(e) => setSearchValue(e.target.value)}
                   />

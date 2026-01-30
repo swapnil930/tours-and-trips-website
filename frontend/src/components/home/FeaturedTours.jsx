@@ -81,7 +81,7 @@ const FeaturedTours = () => {
           <p className="text-3xl lg:text-4xl font-bold">
             Featured Destinations
           </p>
-          <Link to="/upcoming-tours" className="hidden lg:flex text-black font-medium rounded-lg p-2 bg-yellow-400 hover:bg-yellow-500">
+          <Link to="/" className="hidden lg:flex text-black font-medium rounded-lg p-2 bg-yellow-400 hover:bg-yellow-500">
             Explore All
           </Link>
         </div>
@@ -153,7 +153,7 @@ const FeaturedTours = () => {
         <FaArrowRight className="text-yellow-300" />
       </button>
       <div className="flex justify-center mt-8 lg:hidden">
-        <Link to="/upcoming-tours" className="text-black font-medium rounded-lg px-6 py-2 bg-yellow-400 hover:bg-yellow-500">
+        <Link to="/" className="text-black font-medium rounded-lg px-6 py-2 bg-yellow-400 hover:bg-yellow-500">
           Explore All
         </Link>
       </div>

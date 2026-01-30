@@ -4,12 +4,20 @@ import { Link, useLocation } from "react-router-dom";
 const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
   const location = useLocation();
 
+  // const tabs = [
+  //   { id: 1, title: "Home", path: "/" },
+  //   { id: 2, title: "Tour", path: "/upcoming-tours" },
+  //   { id: 3, title: "Blog", path: "/blogs" },
+  //   { id: 4, title: "About", path: "/about-us" },
+  //   { id: 5, title: "Contact Us", path: "/contact-us" },
+  // ];
+
   const tabs = [
     { id: 1, title: "Home", path: "/" },
-    { id: 2, title: "Tour", path: "/upcoming-tours" },
-    { id: 3, title: "Blog", path: "/blogs" },
-    { id: 4, title: "About", path: "/about-us" },
-    { id: 5, title: "Contact Us", path: "/contact-us" },
+    { id: 2, title: "Tour", path: "#tour" },
+    { id: 3, title: "Blog", path: "#blog" },
+    { id: 4, title: "About Us", path: "#about-us" },
+    { id: 5, title: "Contact Us", path: "#contact-us" },
   ];
 
   const closeMenu = () => setMenuOpen(false);
@@ -17,7 +25,7 @@ const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
   return (
     <header
       className={`fixed w-full top-0 z-50 transition-all duration-300 
-      ${scrolled ? "bg-yellow-500 shadow-lg py-4" : "bg-transparent py-6"}`}
+      ${scrolled ? "bg-yellow-500 shadow-lg py-2" : "bg-transparent py-2"}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
@@ -53,11 +61,11 @@ const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
           <div className="flex items-center justify-center gap-1">
 
             <div className="flex flex-row items-center gap-2 lg:gap-4">
-              <a className="flex flex-row gap-1 items-center text-xs font-medium" href="https://www.instagram.com/tripzee_holidays/">
-                <FaInstagram size={24} />
+              <a className="flex flex-row gap-1 items-center text-xs font-medium" href="#">
+                <FaInstagram size={26} />
               </a>
               <span>|</span>
-              <a href="tel:+919136970722">
+              <a href="#">
                 <div
                   className="flex items-center justify-center gap-1 font-medium text-xs 
                  h-6.5 w-6.5 bg-black rounded-full text-yellow-500 
@@ -65,22 +73,19 @@ const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
                  transition-all duration-300 ease-in-out"
                 >
                   <FaPhoneAlt size={13} />
-                  <span className="hidden lg:block">(+91) 9834559697</span>
+                  <span className="hidden lg:block">(+91) 1234567890</span>
                 </div>
               </a>
+              <span className=" lg:hidden">|</span>
+              <button
+                onClick={() => setMenuOpen(!menuOpen)}
+                className="md:hidden rounded-lg"
+              >
 
+                <FaBars size={20} className="text-gray-900" />
+
+              </button>
             </div>
-            <span className=" lg:hidden">|</span>
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="md:hidden p-2 rounded-lg"
-            >
-              {menuOpen ? (
-                <FaTimes className={scrolled ? "text-gray-900" : "text-white"} />
-              ) : (
-                <FaBars className={scrolled ? "text-gray-900" : "text-white"} />
-              )}
-            </button>
           </div>
         </div>
       </div>
