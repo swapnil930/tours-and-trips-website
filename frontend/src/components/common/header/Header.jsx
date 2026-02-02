@@ -4,20 +4,12 @@ import { Link, useLocation } from "react-router-dom";
 const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
   const location = useLocation();
 
-  // const tabs = [
-  //   { id: 1, title: "Home", path: "/" },
-  //   { id: 2, title: "Tour", path: "/upcoming-tours" },
-  //   { id: 3, title: "Blog", path: "/blogs" },
-  //   { id: 4, title: "About", path: "/about-us" },
-  //   { id: 5, title: "Contact Us", path: "/contact-us" },
-  // ];
-
   const tabs = [
     { id: 1, title: "Home", path: "/" },
-    { id: 2, title: "Tour", path: "#tour" },
-    { id: 3, title: "Blog", path: "#blog" },
-    { id: 4, title: "About Us", path: "#about-us" },
-    { id: 5, title: "Contact Us", path: "#contact-us" },
+    { id: 2, title: "Tour", path: "/upcoming-tours" },
+    { id: 3, title: "Blog", path: "/blogs" },
+    { id: 4, title: "About", path: "/about-us" },
+    { id: 5, title: "Contact Us", path: "/contact-us" },
   ];
 
   const closeMenu = () => setMenuOpen(false);
@@ -65,7 +57,7 @@ const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
                 <FaInstagram size={26} />
               </a>
               <span>|</span>
-              <a href="#">
+              <a href="tel:+911234567890">
                 <div
                   className="flex items-center justify-center gap-1 font-medium text-xs 
                  h-6.5 w-6.5 bg-black rounded-full text-yellow-500 
