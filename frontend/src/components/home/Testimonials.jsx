@@ -1,60 +1,16 @@
 import { FaStar } from "react-icons/fa";
 import { useEffect, useRef } from "react";
+import testimonials from "../../jsonData/testimonials";
 
 const Testimonials = () => {
   const sliderRef = useRef(null);
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      location: "New York, USA",
-      rating: 5,
-      text: "Amazing experience! The tour was well organized and our guide was incredibly knowledgeable.",
-      avatar: "👩‍💼",
-    },
-    {
-      name: "Michael Chen",
-      location: "Singapore",
-      rating: 5,
-      text: "Best vacation ever! Everything was perfect from start to finish.",
-      avatar: "👨‍💻",
-    },
-    {
-      name: "Emma Williams",
-      location: "London, UK",
-      rating: 5,
-      text: "Exceptional service and unforgettable memories!",
-      avatar: "👩‍🎨",
-    },
-    {
-      name: "Alex Brown",
-      location: "Sydney, Australia",
-      rating: 5,
-      text: "Highly professional team and amazing destinations.",
-      avatar: "🧑‍✈️",
-    },
-    {
-      name: "Alex Brown",
-      location: "Sydney, Australia",
-      rating: 5,
-      text: "Highly professional team and amazing destinations.",
-      avatar: "🧑‍✈️",
-    },
-    {
-      name: "Alex Brown",
-      location: "Sydney, Australia",
-      rating: 5,
-      text: "Highly professional team and amazing destinations.",
-      avatar: "🧑‍✈️",
-    },
-  ];
 
   useEffect(() => {
     const slider = sliderRef.current;
     let scrollAmount = 0;
 
     const interval = setInterval(() => {
-      const cardWidth = slider.firstChild.offsetWidth + 24; // card width + gap
+      const cardWidth = slider.firstChild.offsetWidth + 24;
       scrollAmount += cardWidth;
 
       if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
@@ -71,15 +27,17 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="pt-12 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex flex-col items-start mb-10">
-          <span className="h-1 w-28 bg-yellow-500 mb-2 rounded-full"></span>
-          <p className="text-3xl lg:text-4xl font-bold">
+    <section className="py-12 overflow-hidden">
+      <div className="flex flex-col items-start px-10 mb-10">
+        <span className="h-1 w-28 bg-yellow-500 mb-1 rounded-full"></span>
+        <div className="flex w-full justify-between items-center">
+          <p className="text-[1.75rem] leading-normal md:text-3xl lg:text-4xl xl:text-[2.5rem] xl:leading-tight font-semibold text-black">
             What's Our Travelers Say
           </p>
-        </div>
 
+        </div>
+      </div>
+      <div className="max-w-7xl mx-auto px-8">
         {/* Slider */}
         <div
           ref={sliderRef}

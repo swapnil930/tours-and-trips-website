@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { FaArrowLeft, FaArrowRight, FaCalendar, FaMapMarkerAlt, FaStopwatch } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import tours from "../../jsonData/Tours";
 
 const FeaturedTours = () => {
 
@@ -14,71 +15,14 @@ const FeaturedTours = () => {
     sliderRef.current.scrollLeft += 350;
   };
 
-  const tours = [
-    {
-      id: 1,
-      title: "Kerala",
-      route: "Kochi - Kanyakumari",
-      image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1000&q=80",
-      oldPrice: 18000,
-      price: 16999,
-      duration: "9D/8N",
-      dates: "1st Nov, 22nd Nov",
-      batches: 6,
-    },
-    {
-      id: 2,
-      title: "Kashmir",
-      route: "Mumbai - Mumbai",
-      image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1000&q=80",
-      oldPrice: 20000,
-      price: 18500,
-      duration: "10D/9N",
-      dates: "1st Jan, 12th Feb",
-      batches: 0,
-    },
-    {
-      id: 3,
-      title: "Manali - Kasol - Dharamshala",
-      route: "Delhi - Delhi",
-      image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1000&q=80",
-      oldPrice: 16000,
-      price: 14499,
-      duration: "10D/9N",
-      dates: "3rd Oct, 11th Oct",
-      batches: 12,
-    },
-    {
-      id: 4,
-      title: "TAILAND",
-      route: "Delhi - Delhi",
-      image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1000&q=80",
-      oldPrice: 16000,
-      price: 14499,
-      duration: "10D/9N",
-      dates: "3rd Oct, 11th Oct",
-      batches: 12,
-    },
-    {
-      id: 5,
-      title: "Manali - Kasol - Dharamshala",
-      route: "Delhi - Delhi",
-      image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1000&q=80",
-      oldPrice: 16000,
-      price: 14499,
-      duration: "10D/9N",
-      dates: "3rd Oct, 11th Oct",
-      batches: 12,
-    },
-  ];
 
   return (
     <div className="relative w-full mb-10">
 
       <div className="flex flex-col items-start px-10 mb-10">
-        <span className="h-1 w-28 bg-yellow-500 mb-2 rounded-full"></span>
+        <span className="h-1 w-28 bg-yellow-500 mb-1 rounded-full"></span>
         <div className="flex w-full justify-between items-center">
-          <p className="text-3xl lg:text-4xl font-bold">
+          <p className="text-[1.75rem] leading-normal md:text-3xl lg:text-4xl xl:text-[2.5rem] xl:leading-tight font-semibold text-black">
             Featured Destinations
           </p>
           <Link to="/upcoming-tours" className="hidden lg:flex text-black font-medium rounded-lg p-2 bg-yellow-400 hover:bg-yellow-500">
@@ -92,14 +36,16 @@ const FeaturedTours = () => {
         onClick={slideLeft}
         className="absolute left-5 top-1/2 z-20 -translate-y-1/2 bg-white p-2 rounded-full shadow"
       >
-        <FaArrowLeft className="text-yellow-300" />
+        <FaArrowLeft className="text-yellow-400" />
       </button>
 
       <div
         ref={sliderRef}
         className="flex gap-8 overflow-x-scroll scroll-smooth scrollbar-hide px-10  "
       >
+
         {tours.map((tour) => (
+          // <Link to={`/trip/${tour.title}`} >
           <div
             key={tour.id}
             className="relative min-w-[275px] h-[370px] rounded-2xl overflow-hidden shadow-lg group"
@@ -142,7 +88,9 @@ const FeaturedTours = () => {
               </div>
             </div>
           </div>
+          // </Link>
         ))}
+
 
       </div>
       {/* Right Button */}
@@ -150,7 +98,7 @@ const FeaturedTours = () => {
         onClick={slideRight}
         className="absolute right-5 top-1/2 z-20 -translate-y-1/2 bg-white p-2 rounded-full shadow"
       >
-        <FaArrowRight className="text-yellow-300" />
+        <FaArrowRight className="text-yellow-400" />
       </button>
       <div className="flex justify-center mt-8 lg:hidden">
         <Link to="/upcoming-tours" className="text-black font-medium rounded-lg px-6 py-2 bg-yellow-400 hover:bg-yellow-500">

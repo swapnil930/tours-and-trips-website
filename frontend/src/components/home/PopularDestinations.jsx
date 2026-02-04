@@ -1,24 +1,20 @@
-const PopularDestinations = () => {
-  const destinations = [
-    { name: 'Paris', country: 'France', tours: 45, image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470" },
-    { name: 'Dubai', country: 'UAE', tours: 38, image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" },
-    { name: 'Maldives', country: 'Maldives', tours: 52, image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470" },
-    { name: 'New York', country: 'USA', tours: 67, image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e" },
-    { name: 'London', country: 'UK', tours: 41, image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" },
-    { name: 'Rome', country: 'Italy', tours: 36, image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" }
-  ];
 
+import destinations from "../../jsonData/Destinations";
+
+const PopularDestinations = () => {
 
   return (
     <section className="py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-start mb-10">
-          <span className="h-1 w-28 bg-yellow-500 mb-2 rounded-full"></span>
-          <p className="text-3xl lg:text-4xl font-bold">
-            Explore Dream Location
+      <div className="flex flex-col items-start px-10 mb-10">
+        <span className="h-1 w-28 bg-yellow-500 mb-1 rounded-full"></span>
+        <div className="flex w-full justify-between items-center">
+          <p className="text-[1.75rem] leading-normal md:text-3xl lg:text-4xl xl:text-[2.5rem] xl:leading-tight font-semibold text-black">
+            Popular Destinations
           </p>
-        </div>
 
+        </div>
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           {destinations.map((dest, idx) => (
             <div

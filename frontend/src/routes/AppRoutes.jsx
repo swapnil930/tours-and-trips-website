@@ -8,6 +8,8 @@ import Contact from "../pages/Contact";
 import WhatsAppBtn from "../components/common/footer/WhatsAppBtn";
 import Header from "../components/common/header/Header";
 import Blogs from "../pages/Blogs";
+// import TourDetails from "../pages/tours/TourDetails";
+
 
 const AppRoutes = ({ scrolled, menuOpen, setMenuOpen }) => {
   return (
@@ -21,6 +23,7 @@ const AppRoutes = ({ scrolled, menuOpen, setMenuOpen }) => {
         <Route path="/about-us" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/blogs" element={<Blogs />} />
+        {/* <Route path="/trip/:title" element={<TourDetails/>} /> */}
       </Routes>
 
       <Footer />

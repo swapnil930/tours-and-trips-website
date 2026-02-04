@@ -25,15 +25,15 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-8">
+    <section className="py-12">
 
       <div className="flex flex-col px-6 lg:px-10 mb-10">
-        <span className="h-1 w-28 bg-yellow-500 mb-4 rounded-full"></span>
+        <span className="h-1 w-28 bg-yellow-500 mb-1 rounded-full"></span>
         <div className="flex flex-col lg:flex-row w-full gap-10">
           {/* LEFT TEXT */}
           <div className="w-full lg:w-[35%]">
-            <p className="text-4xl lg:text-5xl font-bold mb-4">
-              Why Choose us
+            <p className="text-[1.75rem] leading-normal md:text-3xl lg:text-4xl xl:text-[2.5rem] xl:leading-tight font-semibold text-black mb-4">
+              Why Choose us?
             </p>
             <p className="text-md font-medium">
               Planning a trip with friends can be messy someone cancels,
