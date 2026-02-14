@@ -2,9 +2,8 @@ import { FaBars, FaInstagram, FaPhoneAlt, FaTimes } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 
 const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
-  const location = useLocation();
 
-  const tabs = [
+   const tabs = [
     { id: 1, title: "Home", path: "/" },
     { id: 2, title: "Tour", path: "/upcoming-tours" },
     { id: 3, title: "Blog", path: "/blogs" },
@@ -12,6 +11,7 @@ const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
     { id: 5, title: "Contact Us", path: "/contact-us" },
   ];
 
+  const location = useLocation();
   const closeMenu = () => setMenuOpen(false);
 
   return (
@@ -42,7 +42,7 @@ const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
                     ? "text-white"
                     : scrolled
                       ? "text-black hover:text-white"
-                      : "text-white/80 hover:text-white"
+                      : "text-white/80 hover:text-black"
                     }`}
                 >
                   {item.title}
