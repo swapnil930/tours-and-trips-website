@@ -1,11 +1,11 @@
 
-import destinations from "../../jsonData/Destinations";
+import destinations from "../../jsonData/destinations";
 
 const PopularDestinations = () => {
 
   return (
     <section className="py-20">
-      <div className="flex flex-col items-start px-10 mb-10">
+      <div className="flex flex-col items-start px-5 lg:px-10 mb-10">
         <span className="h-1 w-28 bg-yellow-500 mb-1 rounded-full"></span>
         <div className="flex w-full justify-between items-center">
           <p className="text-[1.75rem] leading-normal md:text-3xl lg:text-4xl xl:text-[2.5rem] xl:leading-tight font-semibold text-black">

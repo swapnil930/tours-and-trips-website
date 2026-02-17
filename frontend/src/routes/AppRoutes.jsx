@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Tours from "../pages/Tours";
+import Tours from "../pages/tours/Tours";
 import Footer from "../components/common/footer/Footer";
 import Home from "../pages/Home";
 import Destinations from "../pages/Destinations";
@@ -7,8 +7,9 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import WhatsAppBtn from "../components/common/footer/WhatsAppBtn";
 import Header from "../components/common/header/Header";
-import Blogs from "../pages/Blogs";
+import Blogs from "../pages/blog/Blogs";
 // import TourDetails from "../pages/tours/TourDetails";
+// import BlogDetails from "../pages/blog/BlogDetails";
 
 
 const AppRoutes = ({ scrolled, menuOpen, setMenuOpen }) => {
@@ -23,7 +24,8 @@ const AppRoutes = ({ scrolled, menuOpen, setMenuOpen }) => {
         <Route path="/about-us" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/blogs" element={<Blogs />} />
-        {/* <Route path="/trip/:title" element={<TourDetails/>} /> */}
+        {/* <Route path="/upcoming-tours/trip/:id" element={<TourDetails/>} />
+         <Route path="/blogs/:id" element={<BlogDetails />} /> */}
       </Routes>
 
       <Footer />

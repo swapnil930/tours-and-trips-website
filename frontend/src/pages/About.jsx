@@ -21,7 +21,16 @@ const About = () => {
       <section className="py-20 px-5 max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           <div>
-            <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
+       <div className="flex flex-col items-start">
+        <span className="h-1 w-28 bg-yellow-500 mb-1 rounded-full"></span>
+        <div className="flex w-full justify-between items-center">
+          <p className="text-[1.75rem] leading-normal md:text-3xl lg:text-4xl xl:text-[2.5rem] xl:leading-tight font-semibold text-black">
+            Our Mission
+          </p>
+
+        </div>
+      </div>
+            
             <p className="text-gray-700 text-lg">
               Our mission is to make travel easy and enjoyable for everyone. We carefully plan trips, handpick destinations, and ensure safety and comfort throughout your journey.
             </p>
@@ -65,7 +74,7 @@ const About = () => {
         <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
           Join thousands of happy travelers who trust us for their unforgettable journeys.
         </p>
-        <Link to="/upcoming-tours" className="bg-yellow-500 text-white font-bold px-8 py-3 rounded-lg hover:bg-yellow-600 transition-colors">
+        <Link to="/contact" className="bg-yellow-500 text-white font-bold px-8 py-3 rounded-lg hover:bg-yellow-600 transition-colors">
           Book Your Trip
         </Link>
       </section>
