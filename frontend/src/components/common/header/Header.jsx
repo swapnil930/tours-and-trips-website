@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
 
-   const tabs = [
+  const tabs = [
     { id: 1, title: "Home", path: "/" },
     { id: 2, title: "Tour", path: "/upcoming-tours" },
     { id: 3, title: "Blog", path: "/blogs" },
@@ -34,22 +34,34 @@ const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
           <nav className="hidden md:flex items-center space-x-8">
             {tabs.map((item) => {
               const isActive = location.pathname === item.path;
+
               return (
                 <Link
                   key={item.id}
                   to={item.path}
-                  className={`font-medium transition-colors ${isActive
-                    ? "text-white"
-                    : scrolled
-                      ? "text-black hover:text-white"
-                      : "text-white/80 hover:text-black"
+                  className={`relative font-medium transition-colors ${isActive
+                      ? scrolled
+                        ? "text-white"
+                        : "text-black"
+                      : scrolled
+                        ? "text-black hover:text-white"
+                        : "text-white hover:text-black"
                     }`}
                 >
                   {item.title}
+
+                  {/* Yellow Underline */}
+                  <span
+                    className={`absolute left-0 -bottom-0 h-[2px] transition-all duration-300 ${isActive ? "w-full" : ""
+                      } ${scrolled ? "bg-white" : "bg-yellow-400"
+                      }`}
+                  ></span>
+
                 </Link>
               );
             })}
           </nav>
+
           <div className="flex items-center justify-center gap-1">
 
             <div className="flex flex-row items-center gap-2 lg:gap-4">
