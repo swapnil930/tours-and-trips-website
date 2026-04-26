@@ -6,6 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter } from 'react-router-dom';
 import ReactModal from 'react-modal';
+import "./i18n";
 
 ReactModal.setAppElement("#root");
 

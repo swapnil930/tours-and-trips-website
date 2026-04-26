@@ -1,6 +1,7 @@
 import { FaMapMarkerAlt, FaClock, FaUser } from "react-icons/fa";
 
-const TourInfoCard = () => {
+
+const TourInfoCard = ({pickUp="", drop="", duration="", type=""}) => {
   return (
     <div className="max-w-6xl mx-auto px-4">
       <div className="bg-white rounded-3xl shadow-xl border-t-4 border-blue-500 py-6 px-6 md:px-10">
@@ -14,7 +15,7 @@ const TourInfoCard = () => {
             </div>
             <div>
               <p className="text-gray-500 text-sm">Pickup Location</p>
-              <h3 className="text-xl font-semibold text-black">Krabi</h3>
+              <h3 className="text-xl font-semibold text-black">{pickUp}</h3>
             </div>
           </div>
 
@@ -25,7 +26,7 @@ const TourInfoCard = () => {
             </div>
             <div>
               <p className="text-gray-500 text-sm">Drop Location</p>
-              <h3 className="text-xl font-semibold text-black">Bangkok</h3>
+              <h3 className="text-xl font-semibold text-black">{drop}</h3>
             </div>
           </div>
 
@@ -36,7 +37,7 @@ const TourInfoCard = () => {
             </div>
             <div>
               <p className="text-gray-500 text-sm">Duration</p>
-              <h3 className="text-xl font-semibold text-black">7N / 8D</h3>
+              <h3 className="text-xl font-semibold text-black">{duration}</h3>
             </div>
           </div>
 
@@ -47,7 +48,7 @@ const TourInfoCard = () => {
             </div>
             <div>
               <p className="text-gray-500 text-sm">Tour Type</p>
-              <h3 className="text-xl font-semibold text-black">Group</h3>
+              <h3 className="text-xl font-semibold text-black">{type}</h3>
             </div>
           </div>
 

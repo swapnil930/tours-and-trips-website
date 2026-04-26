@@ -1,26 +1,29 @@
+import { useTranslation } from "react-i18next";
 import { FaAward, FaChartLine, FaHeart, FaShieldAlt } from "react-icons/fa";
 
 const WhyChooseUs = () => {
+  const { t } = useTranslation()
+
   const features = [
     {
       icon: <FaAward className="w-8 h-8" />,
-      title: "Best Price Guarantee",
-      description: "We ensure you get the best prices for all our tours and packages",
+      title: t("whyChoose.bestPrice"),
+      description: t("whyChoose.description1"),
     },
     {
       icon: <FaShieldAlt className="w-8 h-8" />,
-      title: "Safe & Secure",
-      description: "Your safety is our priority with secure payments and insurance",
+      title: t("whyChoose.safeSecure"),
+      description: t("whyChoose.description2"),
     },
     {
       icon: <FaHeart className="w-8 h-8" />,
-      title: "Trusted by Thousands",
-      description: "Join 50,000+ happy travelers who explored the world with us",
+      title: t("whyChoose.trusted"),
+      description: t("whyChoose.description3"),
     },
     {
       icon: <FaChartLine className="w-8 h-8" />,
-      title: "24/7 Support",
-      description: "Our team is always available to help you anytime, anywhere",
+      title: t("whyChoose.support"),
+      description: t("whyChoose.description4"),
     },
   ];
 
@@ -33,13 +36,10 @@ const WhyChooseUs = () => {
           {/* LEFT TEXT */}
           <div className="w-full lg:w-[35%]">
             <p className="text-[1.75rem] leading-normal md:text-3xl lg:text-4xl xl:text-[2.5rem] xl:leading-tight font-semibold text-black mb-4">
-              Why Choose us?
+              {t("sections.whyChooseUs")}
             </p>
             <p className="text-md font-medium">
-              Planning a trip with friends can be messy someone cancels,
-              someone gets confused, and nothing goes as planned.
-              That’s why we’re here! We take care of everything, so you
-              just show up, relax, and enjoy your holiday.
+              {t("whyChoose.description")}
             </p>
           </div>
 

@@ -8,8 +8,8 @@ import Contact from "../pages/Contact";
 import WhatsAppBtn from "../components/common/footer/WhatsAppBtn";
 import Header from "../components/common/header/Header";
 import Blogs from "../pages/blog/Blogs";
-// import TourDetails from "../pages/tours/TourDetails";
-// import BlogDetails from "../pages/blog/BlogDetails";
+import TourDetails from "../pages/tours/TourDetails";
+import BlogDetails from "../pages/blog/BlogDetails";
 
 
 const AppRoutes = ({ scrolled, menuOpen, setMenuOpen }) => {
@@ -24,8 +24,8 @@ const AppRoutes = ({ scrolled, menuOpen, setMenuOpen }) => {
         <Route path="/about-us" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/blogs" element={<Blogs />} />
-        {/* <Route path="/upcoming-tours/trip/:id" element={<TourDetails/>} />
-         <Route path="/blogs/:id" element={<BlogDetails />} /> */}
+        <Route path="/upcoming-tours/trip/:id" element={<TourDetails/>} />
+         <Route path="/blogs/:id" element={<BlogDetails />} />
       </Routes>
 
       <Footer />

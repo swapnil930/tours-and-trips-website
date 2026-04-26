@@ -1,0 +1,285 @@
+{
+  "header": {
+    "home": "Trang chủ",
+    "tour": "Tour",
+    "blog": "Blog",
+    "about": "Giới thiệu",
+    "contact": "Liên hệ",
+    "tagline": "Khám Phá Thế Giới"
+  },
+  "language": {
+    "english": "Tiếng Anh",
+    "hindi": "Tiếng Hindi"
+  },
+  "home": {
+    "sirfTripNahiMemoriesBanao": "Không chỉ là chuyến đi, hãy tạo nên kỷ niệm",
+    "fromInstaWorthyStays": "Từ những nơi ở đáng đăng Instagram đến những chuyến phiêu lưu trong danh sách mơ ước – chúng tôi lo tất cả, bạn chỉ cần tận hưởng.",
+    "letsExplore": "Cùng Khám Phá",
+    "search": "Tìm kiếm"
+  },
+  "destinations": {
+    "thailand": {
+      "name": "Thailand",
+      "description": "Chào mừng đến với Vùng đất của Nụ cười, nơi truyền thống cổ xưa hòa quyện với những điểm tham quan hiện đại..."
+    },
+    "himachal": {
+      "name": "Himachal",
+      "description": "Cảm nhận vẻ đẹp kỳ diệu của Himachal Pradesh và tận hưởng núi non yên bình..."
+    },
+    "sikkim": {
+      "name": "Sikkim",
+      "description": "Thiên đường ở Đông Himalaya với vẻ đẹp ngoạn mục..."
+    },
+    "goa": {
+      "name": "Goa",
+      "description": "Bãi biển, cuộc sống về đêm và di sản Bồ Đào Nha tạo nên kỳ nghỉ nhiệt đới hoàn hảo..."
+    },
+    "kerala": {
+      "name": "Kerala",
+      "description": "Sông nước, nhà thuyền và thiên nhiên xanh mát tạo nên Vùng đất của Chúa..."
+    }
+  },
+  "sections": {
+    "featuredDestinations": "Điểm đến nổi bật",
+    "adventureShouldBe": "Không chắc cuộc phiêu lưu tiếp theo  của bạn nên \n là gì?",
+    "leaveTheDetails": "Hãy để chi tiết cho chúng tôi, và sẵn sàng khám phá thế giới cùng chúng tôi. Chúng tôi lo liệu mọi thứ, để bạn có thể tập trung vào việc tạo ra những kỷ niệm kéo dài suốt đời.",
+    "connectWithExpert": "Kết nối với chuyên gia",
+    "popularDestinations": "Điểm đến phổ biến",
+    "itinerary": "Lịch trình",
+    "costing": "Chi phí",
+    "inclusions": "Bao gồm",
+    "exclusions": "Không bao gồm",
+    "whyChooseUs": "Tại sao chọn chúng tôi?",
+    "blogStories": "Blog & Câu chuyện",
+    "testimonials": "Khách hàng nói gì",
+    "gallery": "Thư viện nội dung",
+    "getInTouch": "Liên hệ với chúng tôi",
+    "customPackages": "Gói du lịch tùy chỉnh với ưu đãi đặc biệt"
+  },
+  "whyChoose": {
+    "description": "Lên kế hoạch cho chuyến đi cùng bạn bè có thể khá rắc rối – có người hủy, có người bối rối và mọi thứ không diễn ra theo kế hoạch. Vì vậy chúng tôi ở đây! Chúng tôi lo mọi thứ để bạn chỉ cần xuất hiện, thư giãn và tận hưởng kỳ nghỉ của mình.",
+    "bestPrice": "Đảm bảo giá tốt nhất",
+    "safeSecure": "An toàn & Bảo mật",
+    "trusted": "Được hàng nghìn khách hàng tin tưởng",
+    "support": "Hỗ trợ 24/7"
+  },
+  "labels": {
+    "batches": "Đợt khởi hành",
+    "duration": "{{days}} Ngày / {{nights}} Đêm",
+    "tours": "Tour",
+    "readMore": "Đọc thêm"
+  },
+  "tours": {
+    "manaliKasolDharamshala": {
+      "title": "Manali - Kasol - Dharamshala",
+      "description": "Khám phá vẻ đẹp yên bình của dãy Himalaya với tour Manali-Kasol-Dharamshala của chúng tôi.",
+      "type": "Tour theo nhóm",
+      "upcomingDates": {
+        "February": [
+          "11 Feb/26 - 19 Feb/26",
+          "21 Feb/26 - 28 Feb/26"
+        ],
+        "March": []
+      },
+      "itinerary": [
+        "Delhi đến Manali (qua đêm)",
+        "Tham quan Manali",
+        "Manali đến Kasol",
+        "Trek Kheerganga từ Kasol",
+        "Kasol đến Dharamshala",
+        "Tham quan McLeodganj",
+        "Dharamshala về lại Delhi"
+      ],
+      "costing": [
+        {
+          "type": "Phòng đôi",
+          "price": "Rs. 14500/-"
+        },
+        {
+          "type": "Phòng ba",
+          "price": "Rs. 13500/-"
+        }
+      ],
+      "inclusions": [
+        "Lưu trú",
+        "Bữa sáng & Bữa tối hằng ngày",
+        "Xe Volvo",
+        "Tham quan địa phương"
+      ],
+      "exclusions": [
+        "Chi phí cá nhân",
+        "Hoạt động mạo hiểm",
+        "Các mục không đề cập trong phần bao gồm"
+      ]
+    },
+    "kashmir": {
+      "title": "Kashmir",
+      "description": "Nơi mọi khung cảnh đều như một giấc mơ",
+      "type": "Tour theo nhóm",
+      "upcomingDates": {
+        "February": [
+          "11 Feb/26 - 19 Feb/26",
+          "21 Feb/26 - 28 Feb/26"
+        ],
+        "March": []
+      },
+      "itinerary": [
+        "Đến Srinagar",
+        "Đi thuyền Shikara trên hồ Dal",
+        "Tham quan Gulmarg",
+        "Tham quan Pahalgam",
+        "Tham quan Sonmarg",
+        "Mua sắm & Khởi hành"
+      ],
+      "costing": [
+        {
+          "type": "Phòng đôi",
+          "price": "Rs. 18500/-"
+        },
+        {
+          "type": "Phòng ba",
+          "price": "Rs. 17000/-"
+        }
+      ],
+      "inclusions": [
+        "Khách sạn",
+        "Bữa sáng & Bữa tối",
+        "Xe riêng",
+        "Đi thuyền Shikara"
+      ],
+      "exclusions": [
+        "Vé máy bay",
+        "Vé Gondola",
+        "Chi phí cá nhân"
+      ]
+    },
+    "kerala": {
+      "title": "Kerala",
+      "description": "Nơi mỗi khung cảnh đều như một giấc mơ",
+      "type": "Tour theo nhóm",
+      "upcomingDates": {
+        "February": [
+          "11 Feb/26 - 19 Feb/26",
+          "21 Feb/26 - 28 Feb/26"
+        ],
+        "March": []
+      },
+      "itinerary": [
+        "Đến Cochin",
+        "Tham quan Munnar",
+        "Thăm khu bảo tồn Thekkady",
+        "Nhà thuyền tại Alleppey",
+        "Biển Kovalam",
+        "Khởi hành"
+      ],
+      "costing": [
+        {
+          "type": "Phòng đôi",
+          "price": "Rs. 16500/-"
+        }
+      ],
+      "inclusions": [
+        "Nhà thuyền",
+        "Bữa sáng",
+        "Di chuyển riêng"
+      ],
+      "exclusions": [
+        "Vé máy bay",
+        "Vé tham quan"
+      ]
+    },
+    "thailand": {
+      "title": "Thailand",
+      "description": "Trải nghiệm văn hóa sôi động và những bãi biển tuyệt đẹp của Thailand với gói tour độc quyền.",
+      "type": "Tour theo nhóm",
+      "upcomingDates": {
+        "February": [
+          "11 Feb/26 - 19 Feb/26",
+          "21 Feb/26 - 28 Feb/26"
+        ],
+        "March": []
+      },
+      "itinerary": [
+        "Đến Bangkok",
+        "Tham quan Pattaya",
+        "Tour đảo Coral",
+        "Tham quan Bangkok",
+        "Mua sắm & Khởi hành"
+      ],
+      "costing": [
+        {
+          "type": "Phòng đôi",
+          "price": "Rs. 19999/-"
+        }
+      ],
+      "inclusions": [
+        "Khách sạn",
+        "Bữa sáng",
+        "Đưa đón sân bay"
+      ],
+      "exclusions": [
+        "Phí visa",
+        "Chi phí cá nhân"
+      ]
+    },
+    "goa": {
+      "title": "Goa",
+      "description": "Trải nghiệm văn hóa sôi động và những bãi biển tuyệt đẹp của Goa với gói tour độc quyền.",
+      "type": "Tour theo nhóm",
+      "upcomingDates": {
+        "February": [
+          "11 Feb/26 - 19 Feb/26",
+          "21 Feb/26 - 28 Feb/26"
+        ],
+        "March": []
+      },
+      "itinerary": [
+        "Đến Goa",
+        "Tham quan Bắc Goa",
+        "Tham quan Nam Goa",
+        "Thư giãn tại biển",
+        "Khởi hành"
+      ],
+      "costing": [
+        {
+          "type": "Phòng đôi",
+          "price": "Rs. 12500/-"
+        }
+      ],
+      "inclusions": [
+        "Khách sạn",
+        "Bữa sáng",
+        "Di chuyển nội địa"
+      ],
+      "exclusions": [
+        "Thể thao nước",
+        "Chi phí cá nhân"
+      ]
+    }
+  },
+  
+  "blogs": {
+    "adventure": {
+      "title": "Top 10 Điểm Đến Dành Cho Người Yêu Thích Phiêu Lưu",
+      "description": "Khám phá những điểm đến thú vị nhất trên thế giới và lên kế hoạch cho chuyến phiêu lưu tiếp theo cùng chúng tôi.",
+      "date": "1 Thg 2, 2026"
+    },
+    "europe": {
+      "title": "Cẩm Nang Du Lịch Châu Âu",
+      "description": "Từ Paris đến Rome, khám phá những địa điểm nổi bật, viên ngọc ẩn và trải nghiệm địa phương tại châu Âu.",
+      "date": "25 Thg 1, 2026"
+    },
+    "beach": {
+      "title": "Những Kỳ Nghỉ Biển Bạn Không Thể Bỏ Lỡ",
+      "description": "Tìm những bãi biển đẹp nhất và lên kế hoạch nghỉ dưỡng thư giãn cùng những mẹo của chúng tôi.",
+      "date": "15 Thg 1, 2026"
+    },
+    "kashmir": {
+      "title": "Kashmir – Nơi Mọi Khung Cảnh Đều Như Giấc Mơ",
+      "description": "Kashmir không chỉ là một điểm đến, mà là một cảm xúc.",
+      "date": "12 Thg 5, 2025",
+      "author": "Tripzee Holidays"
+    }
+  
+}
+}

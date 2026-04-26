@@ -1,0 +1,258 @@
+{
+  "header": {
+    "home": "Home",
+    "tour": "Tour",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact Us",
+    "tagline": "Explore the World"
+  },
+  "language": {
+    "english": "EN",
+    "vetm": "VN",
+    "thai": "TH"
+  },
+  "home": {
+    "sirfTripNahiMemoriesBanao": "Sirf Trip Nahi, Memories Banao",
+    "fromInstaWorthyStays": "From Insta-worthy stays to bucket-list adventures – we plan it all, you just live the vibe.",
+    "letsExplore": "Let's Explore",
+    "search": "Search"
+  },
+  "destinations": {
+    "thailand": {
+      "name": "Thailand",
+      "description": "Welcome to the Land of Smiles, where ancient traditions blend seamlessly with modern attractions..."
+    },
+    "himachal": {
+      "name": "Himachal",
+      "description": "Feel the magic of Himachal Pradesh and enjoy peaceful mountains..."
+    },
+    "sikkim": {
+      "name": "Sikkim",
+      "description": "A paradise in the Eastern Himalayas with breathtaking beauty..."
+    },
+    "goa": {
+      "name": "Goa",
+      "description": "Beaches, nightlife, and Portuguese heritage create the perfect tropical escape..."
+    },
+    "kerala": {
+      "name": "Kerala",
+      "description": "Backwaters, houseboats, and lush greenery define God's Own Country..."
+    }
+  },
+  "sections": {
+    "featuredDestinations": "Featured Destinations",
+    "adventureShouldBe": "Not sure where your next \n adventure should be?",
+    "leaveTheDetails": "Leave the details to us, and get ready to explore the world with us. We take care of everything, so you can focus on making memories that last a lifetime.",
+    "connectWithExpert": "Connect with expert",
+    "popularDestinations": "Popular Destinations",
+    "itinerary": "Itinerary",
+    "costing": "Costing",
+    "inclusions": "Inclusions",
+    "exclusions": "Exclusions",
+    "whyChooseUs": "Why Choose Us?",
+    "blogStories": "Blog & Stories",
+    "testimonials": "What Our Travelers Say",
+    "gallery": "Content Gallery",
+    "getInTouch": "Get In Touch",
+    "customPackages": "For Customised Travel Packages \n at Special Offers"
+  },
+  "whyChoose": {
+    "description": "Planning a trip with friends can be messy someone cancels, someone gets confused, and nothing goes as planned.That’s why we’re here! We take care of everything, so you just show up, relax, and enjoy your holiday.",
+    "bestPrice": "Best Price Guarantee",
+    "description1":"We ensure you get the best prices for all our tours and packages",
+    "safeSecure": "Safe & Secure",
+    "description2":"Your safety is our priority with secure payments and insurance",
+    "trusted": "Trusted by Thousands",
+    "description3":"Join 50,000+ happy travelers who explored the world with us",
+     "support": "24/7 Support",
+     "description4":"Our team is always available to help you anytime, anywhere"
+  },
+  "labels": {
+    "batches": "Batches",
+    "duration": "{{days}} D / {{nights}} N",
+    "tours": "Tours",
+    "readMore": "Read More"
+  },
+  
+  "tours": {
+    "vietnamGrandTour1": {
+      "title": "Vietnam Grand Tour",
+      "description": "Explore the serene beauty of the Himalayas with our Manali-Kasol-Dharamshala tour.",
+      "type": "Group Tour",
+      "upcomingDates": {
+        "February": [
+          "11 Feb/26 - 19 Feb/26",
+          "21 Feb/26 - 28 Feb/26"
+        ],
+        "March": []
+      },
+      "itinerary": [
+        "Delhi to Manali Overnight Journey",
+        "Manali Local Sightseeing",
+        "Manali to Kasol",
+        "Kasol to Kheerganga Trek",
+        "Kasol to Dharamshala",
+        "McLeodganj Sightseeing",
+        "Dharamshala to Delhi Return"
+      ],
+      "costing": [
+        {
+          "type": "Double Sharing",
+          "price": "Rs. 14500/-"
+        },
+        {
+          "type": "Triple Sharing",
+          "price": "Rs. 13500/-"
+        }
+      ],
+      "inclusions": [
+        "Accommodation",
+        "Daily Breakfast & Dinner",
+        "Volvo Transfers",
+        "Local Sightseeing"
+      ],
+      "exclusions": [
+        "Personal Expenses",
+        "Adventure Activities",
+        "Anything not mentioned in inclusions"
+      ]
+    },
+    "vietnamGrandTour2": {
+      "title": "Vietnam Grand Tour",
+      "description": "Where Every View Feels Like a Dream",
+      "type": "Group Tour",
+      "upcomingDates": {
+        "February": [
+          "11 Feb/26 - 19 Feb/26",
+          "21 Feb/26 - 28 Feb/26"
+        ],
+        "March": []
+      },
+      "itinerary": [
+        "Arrival in Srinagar",
+        "Dal Lake Shikara Ride",
+        "Gulmarg Sightseeing",
+        "Pahalgam Visit",
+        "Sonmarg Excursion",
+        "Shopping & Departure"
+      ],
+      "costing": [
+        {
+          "type": "Double Sharing",
+          "price": "Rs. 18500/-"
+        },
+        {
+          "type": "Triple Sharing",
+          "price": "Rs. 17000/-"
+        }
+      ],
+      "inclusions": [
+        "Hotel Stay",
+        "Breakfast & Dinner",
+        "Private Cab",
+        "Shikara Ride"
+      ],
+      "exclusions": [
+        "Airfare",
+        "Gondola Tickets",
+        "Personal Expenses"
+      ]
+    },
+    "vietnamGrandTour3": {
+      "title": "Vietnam Grand Tour",
+      "description": "Where Every View Feels Like a Dream",
+      "type": "Group Tour",
+      "dates": "15th Nov, 10th Dec",
+      "upcomingDates": {
+        "February": [
+          "11 Feb/26 - 19 Feb/26",
+          "21 Feb/26 - 28 Feb/26"
+        ],
+        "March": []
+      },
+      "itinerary": [
+        "Arrival at Cochin",
+        "Munnar Sightseeing",
+        "Thekkady Wildlife Visit",
+        "Alleppey Houseboat",
+        "Kovalam Beach",
+        "Departure"
+      ],
+      "costing": [
+        {
+          "type": "Double Sharing",
+          "price": "Rs. 16500/-"
+        }
+      ],
+      "inclusions": [
+        "Houseboat Stay",
+        "Breakfast",
+        "Private Transfers"
+      ],
+      "exclusions": [
+        "Flight Tickets",
+        "Entry Fees"
+      ]
+    },
+    "thailand": {
+      "title": "Thailand",
+      "description": "Experience the vibrant culture and stunning beaches of Thailand with our exclusive tour package.",
+      "type": "Group Tour",
+      "dates": "5th Dec, 18th Dec",
+      "upcomingDates": {
+        "February": [
+          "11 Feb/26 - 19 Feb/26",
+          "21 Feb/26 - 28 Feb/26"
+        ],
+        "March": []
+      },
+      "itinerary": [
+        "Arrival in Bangkok",
+        "Pattaya City Tour",
+        "Coral Island Tour",
+        "Bangkok City Tour",
+        "Shopping & Departure"
+      ],
+      "costing": [
+        {
+          "type": "Double Sharing",
+          "price": "Rs. 19999/-"
+        }
+      ],
+      "inclusions": [
+        "Hotel Stay",
+        "Breakfast",
+        "Airport Transfers"
+      ],
+      "exclusions": [
+        "Visa Fees",
+        "Personal Expenses"
+      ]
+    }
+  },
+
+   "blogs": {
+    "adventure": {
+      "title": "Top 10 Destinations for Adventure Lovers",
+      "description": "Explore the most thrilling destinations around the world and plan your next adventure with us.",
+      "date": "Feb 1, 2026"
+    },
+    "europe": {
+      "title": "A Traveler’s Guide to Europe",
+      "description": "From Paris to Rome, discover the best spots, hidden gems, and local experiences in Europe.",
+      "date": "Jan 25, 2026"
+    },
+    "beach": {
+      "title": "Beach Vacations You Can’t Miss",
+      "description": "Find the most beautiful beaches and plan your relaxing getaway with our tips.",
+      "date": "Jan 15, 2026"
+    },
+    "kashmir": {
+      "title": "Kashmir – Where Every View Feels Like a Dream",
+      "description": "Kashmir isn’t just a destination; it’s an emotion.",
+      "date": "May 12, 2025",
+      "author": "Tripzee Holidays"
+    }
+  }
+}

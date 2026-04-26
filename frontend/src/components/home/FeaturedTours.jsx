@@ -2,8 +2,12 @@ import { useRef } from "react";
 import { FaArrowLeft, FaArrowRight, FaCalendar, FaMapMarkerAlt, FaStopwatch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import tours from "../../jsonData/tours";
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
+
 
 const FeaturedTours = () => {
+  const { t } = useTranslation();
 
   const sliderRef = useRef(null);
 
@@ -15,6 +19,13 @@ const FeaturedTours = () => {
     sliderRef.current.scrollLeft += 350;
   };
 
+  const formatDate = (date) => {
+    return new Intl.DateTimeFormat(i18next.language, {
+      day: "numeric",
+      month: "short",
+    }).format(new Date(date));
+  };
+
 
   return (
     <div className="relative w-full mb-10">
@@ -23,7 +34,7 @@ const FeaturedTours = () => {
         <span className="h-1 w-28 bg-yellow-500 mb-1 rounded-full"></span>
         <div className="flex w-full justify-between items-center">
           <p className="text-[1.75rem] leading-normal md:text-3xl lg:text-4xl xl:text-[2.5rem] xl:leading-tight font-semibold text-black">
-            Featured Destinations
+            {t("sections.featuredDestinations")}
           </p>
           <Link to="/upcoming-tours" className="hidden lg:flex text-black font-medium rounded-lg p-2 bg-yellow-400 hover:bg-yellow-500">
             Explore All
@@ -52,8 +63,8 @@ const FeaturedTours = () => {
             >
               <img
                 src={tour?.image}
-                alt={tour?.title}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                alt={tour?.key}
+                className=" inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
@@ -65,26 +76,39 @@ const FeaturedTours = () => {
 
               <div className="absolute bottom-0 p-4 text-white space-y-2 w-full">
                 <span className="inline-block bg-yellow-400 text-black border border-white text-[9px]  px-2 py-1 rounded-full">
-                  {tour?.type}
+                  {t(`tours.${tour.key}.type`)}
                 </span>
 
                 <h3 className="text-md font-bold leading-tight line-clamp-1">
-                  {tour?.title}
+                  {t(`tours.${tour?.key}.title`)}
                 </h3>
 
 
                 <div className="flex justify-between text-sm opacity-90">
                   <span className="flex items-center gap-1"><FaMapMarkerAlt size={10} /> {tour?.pickUp} - {tour?.drop}</span>
-                  <span className="flex items-center gap-1"><FaStopwatch /> {tour?.duration}</span>
+                  <span className="flex items-center gap-1"><FaStopwatch /> {t("labels.duration", {
+                    days: tour?.duration?.days,
+                    nights: tour?.duration?.nights
+                  })}</span>
                 </div>
 
-                <div className="flex items-center gap-2 text-sm">
-                  <FaCalendar /> {tour?.dates}
+                <div className="flex items-center justify-between text-sm">
+                  <div className="flex items-center gap-1">
+                  <FaCalendar />
+                  {tour?.dates?.map((date, index) => (
+                    <span key={index}>
+                      {formatDate(date)}
+                      {index !== tour?.dates?.length - 1 && " - "}
+                    </span>
+                  ))}
+                  </div>
+                  <div>
                   {tour?.batches > 0 && (
                     <span className="text-blue-400">
-                      +{tour?.batches} Batches
+                      +{tour.batches} {t("labels.batches")}
                     </span>
                   )}
+                  </div>
                 </div>
               </div>
             </div>

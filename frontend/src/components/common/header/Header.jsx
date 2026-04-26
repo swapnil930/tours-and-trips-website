@@ -1,17 +1,24 @@
 import { FaBars, FaInstagram, FaPhoneAlt, FaTimes } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
+  const { t, i18n } = useTranslation();
+  const location = useLocation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    localStorage.setItem("lang", lng);
+  };
 
   const tabs = [
-    { id: 1, title: "Home", path: "/" },
-    { id: 2, title: "Tour", path: "/upcoming-tours" },
-    { id: 3, title: "Blog", path: "/blogs" },
-    { id: 4, title: "About", path: "/about-us" },
-    { id: 5, title: "Contact Us", path: "/contact-us" },
+    { id: 1, title: t("header.home"), path: "/" },
+    { id: 2, title: t("header.tour"), path: "/upcoming-tours" },
+    { id: 3, title: t("header.blog"), path: "/blogs" },
+    { id: 4, title: t("header.about"), path: "/about-us" },
+    { id: 5, title: t("header.contact"), path: "/contact-us" },
   ];
 
-  const location = useLocation();
   const closeMenu = () => setMenuOpen(false);
 
   return (
@@ -26,7 +33,7 @@ const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
               Demo Trips
             </h1>
             <p className={`text-xs ${scrolled ? "text-gray-700" : "text-blue-100"}`}>
-              Explore the World
+              {t("header.tagline")}
             </p>
           </div>
 
@@ -40,12 +47,12 @@ const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
                   key={item.id}
                   to={item.path}
                   className={`relative font-medium transition-colors ${isActive
-                      ? scrolled
-                        ? "text-white"
-                        : "text-black"
-                      : scrolled
-                        ? "text-black hover:text-white"
-                        : "text-white hover:text-black"
+                    ? scrolled
+                      ? "text-white"
+                      : "text-black"
+                    : scrolled
+                      ? "text-black hover:text-white"
+                      : "text-white hover:text-black"
                     }`}
                 >
                   {item.title}
@@ -63,8 +70,22 @@ const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
           </nav>
 
           <div className="flex items-center justify-center gap-1">
-
             <div className="flex flex-row items-center gap-2 lg:gap-4">
+              <div>
+                <select
+                  value={i18n.language}
+                  onChange={(e) => changeLanguage(e.target.value)}
+                  className="px-3 py-1 text-sm font-medium text-yellow-600 bg-black 
+               rounded-xl border border-gray-300 
+               focus:outline-none focus:ring-1 focus:ring-yellow-400 
+               cursor-pointer"
+                >
+                  <option value="en">EN</option>
+                  <option value="th">TH</option>
+                  <option value="vi">VI</option>
+                </select>
+              </div>
+              <span>|</span>
               <a className="flex flex-row gap-1 items-center text-xs font-medium" href="#">
                 <FaInstagram size={26} />
               </a>

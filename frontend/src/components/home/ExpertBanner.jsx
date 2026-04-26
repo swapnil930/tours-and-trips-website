@@ -1,22 +1,24 @@
+import { useTranslation } from "react-i18next";
+
 const ExpertBanner = () => {
+    const { t } = useTranslation();
     return (
         <section className="w-full flex justify-center py-8">
             <div className="relative w-[90%] max-w-7xl bg-[#FFF9E6] rounded-2xl border border-gray-300 overflow-hidden flex flex-col lg:flex-row h-[400px]">
 
                 {/* Left Content */}
                 <div className="flex-1 p-6 sm:p-8 lg:p-12 z-10 flex flex-col justify-center">
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black leading-tight">
-                        Not sure where your next <br className="hidden sm:block" />
-                        adventure should be?
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black leading-tight  whitespace-pre-line">
+                        {t("sections.adventureShouldBe")} 
+                        
                     </h2>
 
                     <p className="mt-3 text-gray-900 font-medium text-sm sm:text-base lg:text-base max-w-lg">
-                        Leave the details to us! Our experts design trips that match your
-                        energy and bring your travel dreams alive.
+                        {t("sections.leaveTheDetails")}
                     </p>
 
                     <button className="mt-6 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-5 py-2.5 rounded-lg shadow transition w-fit">
-                        Connect with expert
+                        {t("sections.connectWithExpert")}
                     </button>
                 </div>
 

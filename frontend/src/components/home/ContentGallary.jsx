@@ -2,8 +2,10 @@ import { useRef } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import images from "../../jsonData/imgGallary";
+import { useTranslation } from "react-i18next";
 
 const ContentGallary = () => {
+    const { t } = useTranslation()
 
     const sliderRef = useRef(null);
 
@@ -22,7 +24,7 @@ const ContentGallary = () => {
                 <span className="h-1 w-28 bg-yellow-500 mb-1 rounded-full"></span>
                 <div className="flex w-full justify-between items-center">
                     <p className="text-[1.75rem] leading-normal md:text-3xl lg:text-4xl xl:text-[2.5rem] xl:leading-tight font-semibold text-black">
-                        Content Gallary
+                        {t("sections.gallery")}
                     </p>
                     <div className="flex gap-5">
                         <button

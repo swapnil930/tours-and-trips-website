@@ -77,7 +77,7 @@ const Tours = () => {
                       <FaMapMarkerAlt size={12} /> {tour?.pickUp} - {tour?.drop}
                     </span>
                     <span className="flex items-center gap-1">
-                      <FaStopwatch size={12} /> {tour?.duration}
+                      <FaStopwatch size={12} /> {tour?.duration.days}D/{tour?.duration.nights}N
                     </span>
                   </div>
 

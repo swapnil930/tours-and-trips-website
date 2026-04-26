@@ -1,6 +1,9 @@
+import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 import { FaUser, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 
 const NewsLetter = () => {
+  const { t } = useTranslation()
   return (
 
     <div className="max-w-6xl mx-auto">
@@ -12,11 +15,11 @@ const NewsLetter = () => {
             <div className="flex flex-col gap-2 pl-4">
               <div className="flex flex-col items-start">
                 <h1 className="text-[1.75rem] md:text-3xl lg:text-4xl xl:text-[2.5rem] font-semibold text-black">
-                  Get In Touch
+                  {t("sections.getInTouch")}
                 </h1>
               </div>
-              <p className="text-sm lg:text-base xl:text-md font-medium text-gray-600">
-                For Customised Travel Packages <br /> at Special Offers
+              <p className="text-sm lg:text-base xl:text-md font-medium text-gray-600 whitespace-pre-line">
+                {t("sections.customPackages")}
               </p>
             </div>
           </div>

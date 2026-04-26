@@ -1,51 +1,74 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-import tours from "../../jsonData/Tours";
-import TourHero from "../../components/tour/TourHero";
+import { Link, useParams } from "react-router-dom";
+import tours from "../../jsonData/tours";
+import TourHero from "../../components/common/hero/DetailHero";
 import TourInfoCard from "../../components/tour/TourInfoCard";
+import ReachOutForm from "../../components/tour/ReachOutForm";
+import { useTranslation } from "react-i18next";
 
 const TourDetails = () => {
-  const { title } = useParams();
-  const tour = tours.find((t) => t.title === title);
+  const { t } = useTranslation();
+  const { id } = useParams();
+  const tour = tours.find((t) => t.id === id);
 
   if (!tour) return null;
 
   return (
     <>
-      <TourHero title={tour.title} image={tour.image} />
+      <TourHero
+        title={t(`tours.${tour?.key}.title`)}
+        image={tour?.image}
+        desc={t(`tours.${tour?.key}.description`)}
+      />
 
-      {/* Info Card Overlay */}
-      <div className="relative z-20 -mt-24 px-4 lg:px-16">
-        <TourInfoCard />
+      <div className="relative z-20 -mt-40 lg:-mt-25 px-4 lg:px-16">
+        <TourInfoCard
+          pickUp={tour?.pickUp}
+          drop={tour?.drop}
+          duration={t("labels.duration", {
+            days: tour?.duration?.days,
+            nights: tour?.duration?.nights
+          })}
+          type={t(`tours.${tour.key}.type`)}
+
+        />
       </div>
 
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 lg:px-16 mt-12 grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <div className="max-w-7xl mx-auto px-4 lg:px-10 mt-12 grid grid-cols-1 lg:grid-cols-3 gap-10">
 
         {/* LEFT CONTENT */}
         <div className="lg:col-span-2 space-y-12">
 
-          <Section title="Trip Overview">
-            <p className="text-gray-700 leading-relaxed">
-              Thailand Unplugged: A Journey Through Paradise...{" "}
-              <span className="text-blue-600 cursor-pointer font-medium">
+          <div className="flex flex-col items-start mb-12 ">
+            <span className="h-1 w-28 bg-yellow-500 mb-1 rounded-full"></span>
+            <div className="w-full">
+              <p className="text-[1.75rem] leading-normal md:text-3xl lg:text-4xl xl:text-[2.5rem] xl:leading-tight font-semibold text-black mb-4">
+                Trip Overview
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Welcome to  {t(`tours.${tour?.key}.title`)} Unplugged:{t(`tours.${tour?.key}.description`)}...{" "}
+
+              </p>
+              <Link to="/" className="inline-block mt-4 bg-yellow-400 text-black font-medium rounded-lg px-4 py-2 hover:bg-yellow-500 transition-colors">
                 Read More
-              </span>
-            </p>
+              </Link>
+            </div>
+          </div>
+
+          <Section title={t("sections.itinerary")}>
+            {t(`tours.${tour.key}.itinerary`, { returnObjects: true })?.map(
+              (day, index) => (
+                <div key={index} className="border rounded-xl p-4 mb-4">
+                  <h4 className="font-semibold text-lg">
+                    {t("common.day", "Day")} {index + 1}
+                  </h4>
+                  <p className="text-gray-600">{day}</p>
+                </div>
+              )
+            )}
           </Section>
 
-          <Section title="Itinerary">
-            {tour.itinerary.map((day, index) => (
-              <div key={index} className="border rounded-xl p-4 mb-4">
-                <h4 className="font-semibold text-lg">
-                  Day {index + 1}
-                </h4>
-                <p className="text-gray-600">{day}</p>
-              </div>
-            ))}
-          </Section>
-
-          <Section title="Dates & Costing">
+          <Section title={t("sections.costing")}>
             <p className="text-gray-700 mb-4">
               Contact us directly for available date batches for this trip.
             </p>
@@ -58,8 +81,10 @@ const TourDetails = () => {
                     <th className="p-3 text-left">Price</th>
                   </tr>
                 </thead>
+
+
                 <tbody>
-                  {tour.costing.map((item, i) => (
+                  {t(`tours.${tour.key}.costing`, { returnObjects: true })?.map((item, i) => (
                     <tr key={i} className="border-t">
                       <td className="p-3">{item.type}</td>
                       <td className="p-3 font-semibold">{item.price}</td>
@@ -70,25 +95,25 @@ const TourDetails = () => {
             </div>
           </Section>
 
-          <Section title="Inclusion">
+          <Section title={t("sections.inclusions")}>
             <ul className="list-disc pl-5 space-y-2 text-gray-700">
-              {tour.inclusions.map((item, i) => (
+              {t(`tours.${tour.key}.inclusions`, { returnObjects: true })?.map((item, i) => (
                 <li key={i}>{item}</li>
               ))}
             </ul>
           </Section>
 
-          <Section title="Exclusion">
+          <Section title={t("sections.exclusions")}>
             <ul className="list-disc pl-5 space-y-2 text-gray-700">
-              {tour.exclusions.map((item, i) => (
+              {t(`tours.${tour.key}.exclusions`, { returnObjects: true })?.map((item, i) => (
                 <li key={i}>{item}</li>
               ))}
             </ul>
           </Section>
 
-          <Section title="Gallery">
+          <Section title={t("sections.gallery")}>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-20">
-              {tour.gallery.map((img, i) => (
+              {tour?.gallery?.map((img, i) => (
                 <img
                   key={i}
                   src={img}
@@ -101,10 +126,9 @@ const TourDetails = () => {
 
         </div>
 
-        {/* RIGHT STICKY CARD */}
-        <div className="hidden lg:block">
-          <div className="sticky top-24">
-
+        <div className="">
+          <div className="sticky top-0 lg:top-24">
+            <ReachOutForm />
           </div>
         </div>
 
@@ -117,7 +141,14 @@ export default TourDetails;
 
 const Section = ({ title, children }) => (
   <div>
-    <h2 className="text-2xl font-semibold mb-4">{title}</h2>
-    {children}
+    <div className="flex flex-col items-start mb-10">
+      <span className="h-1 w-28 bg-yellow-500 mb-1 rounded-full"></span>
+      <div className="w-full">
+        <p className="text-[1.75rem] leading-normal md:text-3xl lg:text-4xl xl:text-[2.5rem] xl:leading-tight font-semibold text-black mb-4">
+          {title}
+        </p>
+        {children}
+      </div>
+    </div>
   </div>
 );

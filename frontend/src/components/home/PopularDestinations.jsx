@@ -1,15 +1,16 @@
 
+import { useTranslation } from "react-i18next";
 import destinations from "../../jsonData/destinations";
 
 const PopularDestinations = () => {
-
+ const { t } = useTranslation();
   return (
     <section className="py-20">
       <div className="flex flex-col items-start px-5 lg:px-10 mb-10">
         <span className="h-1 w-28 bg-yellow-500 mb-1 rounded-full"></span>
         <div className="flex w-full justify-between items-center">
           <p className="text-[1.75rem] leading-normal md:text-3xl lg:text-4xl xl:text-[2.5rem] xl:leading-tight font-semibold text-black">
-            Popular Destinations
+            {t("sections.popularDestinations")}
           </p>
 
         </div>
@@ -31,7 +32,7 @@ const PopularDestinations = () => {
                 <h3 className="text-2xl font-bold mb-1">{dest.name}</h3>
                 <p className="text-sm opacity-90 mb-2">{dest.country}</p>
                 <span className="text-xs bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm">
-                  {dest.tours} Tours
+                  {dest.tours} {t("labels.tours")}
                 </span>
               </div>
             </div>
